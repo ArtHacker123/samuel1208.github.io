@@ -4,8 +4,20 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Profile</h1>
+  <ul class="post-list">
+    <li>
+      <h4 class="name">沈飞</h4>
+      <h4 class="address">中国.杭州</h4>
+    </li>
+  </ul>
 
+  <h1 class="page-heading"><a href="{{ "/machine-learning/" | prepend: site.baseurl }}">Machine Learning</a></h1>
+
+  <h1 class="page-heading"><a href="{{ "/machine-learning/" | prepend: site.baseurl }}">Machine Learning</a></h1>
+
+
+  <h1 class="page-heading">Machine Learning</h1>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -18,6 +30,9 @@ layout: default
     {% endfor %}
   </ul>
 
+  <h1 class="page-heading">Machine Learning</h1>
+
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
 
 </div>
