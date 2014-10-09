@@ -3,36 +3,28 @@ layout: default
 ---
 
 <div class="home">
+  <table style="border-width: 0px; padding: 0px; margin: 0px; border-spacing: 0px; border-collapse: collapse;">
+	<tr>
+	    <td width=100 align=center><h1 class="page-heading"><a href="{{"/algorithm/"|prepend:site.baseurl }}">Algorithm</a></h1></td>
+	    <td width=100 align=center><h1 class="page-heading"><a href="{{"/course/"|prepend:site.baseurl }}">Course</a></h1></td>
+        <td width=100 align=center><h1 class="page-heading"><a href="{{"/project/"|prepend:site.baseurl }}">Project</a></h1></td>
+	</tr> 	
+  </table>
+  <hr width=600 size=4 color=#00ffff align=left shade>
 
-  <h1 class="page-heading">Profile</h1>
-  <ul class="post-list">
-    <li>
-      <h4 class="name">沈飞</h4>
-      <h4 class="address">中国.杭州</h4>
-    </li>
-  </ul>
-
-  <h1 class="page-heading"><a href="{{ "/machine-learning/" | prepend: site.baseurl }}">Machine Learning</a></h1>
-
-  <h1 class="page-heading"><a href="{{ "/machine-learning/" | prepend: site.baseurl }}">Machine Learning</a></h1>
-
-
-  <h1 class="page-heading">Machine Learning</h1>
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="page-heading">Machine Learning</h1>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  <table>
+	<tr>
+	    <td><img src="profile.jpg" ></td>
+	    <td>
+		  <ul>
+            <h4 class="name" >ShenFei</h4>
+			<h4 class="email" >shenfei1208@gmail.com</h4>  
+	 		<h4 class="address" >China.HangZhou</h4>  
+	 	  </ul>
+        </td>
+	</tr> 	
+  </table>
+  <hr width=600 size=4 color=#00ffff align=left shade>
+  
 
 </div>
