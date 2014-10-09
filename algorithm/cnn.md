@@ -41,7 +41,7 @@ __预学习__
 4.  训练数据增强    
 <br/>   
 
-* [Andrew NG]组的文章。详细阅读下面这篇文章：
+* [Andrew NG](http://www-cs-faculty.stanford.edu/people/ang/)组的文章。详细阅读下面这篇文章：
 1.  Tiled convolutional neural networks
 <br/>       
 <br/>     
