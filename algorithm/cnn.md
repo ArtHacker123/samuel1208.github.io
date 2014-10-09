@@ -38,7 +38,6 @@ __预学习__
 1.  Fast Inference in Sparse Coding Algorithms with Applications to Object Recognition
 2.  Learning Invariant Features through Topographic FilterMaps
 3.  Learning Convolutional Feature Hierarchies for Visual Recognition  
-4.  训练数据增强    
 <br/>   
 
 * [Andrew NG](http://www-cs-faculty.stanford.edu/people/ang/)组的文章。详细阅读下面这篇文章：
