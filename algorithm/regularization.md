@@ -5,7 +5,8 @@ layout: default
 __Dropout__
 -----------
 ---
-[Geoffrey E. Hinton](http://www.cs.toronto.edu/~hinton/)组于2012年的文章`Improving neural networks by preventing co-adaptation of feature detectors`。      
+[Geoffrey E. Hinton](http://www.cs.toronto.edu/~hinton/)组于2012年的文章`Improving neural networks by preventing co-adaptation of feature detectors`与
+`Dropout: A Simple Way to Prevent Neural Networks from Overfitting`。      
 __训练时__    
 就是一层的某个元素的值保留的概率为P，其为0的概率为1-P。具体可以表述为如下公式：     
 $$\hspace{4mm}o=M * a(...) \\
