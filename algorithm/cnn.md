@@ -6,7 +6,8 @@ CNN(Convolutional Neural Network)
 ============
  
 __介绍__
---------
+--------    
+---    
 由[Yann LeCun](http://yann.lecun.com)于1998年在文章`Gradient-Based Learning Applied to Document Recognition`
 中提出。其传统结构如下图所示:<br/>    
 ![cnn_structure](./img/cnn.jpg)
@@ -14,7 +15,8 @@ __介绍__
 <br/>     
 
 __结构方面的文章__
-----------
+----------    
+---    
 * [Yann LeCun](http://yann.lecun.com)组由2009年发表了`What is the best multi-stage architecture for object 
 recognition?`。对CNN的结构如何进行选择进行了研究。其结构的主要改变为以下两点：    
 1.  卷积层的激活函数使用在传统的Tan函数前面加上一个系数g，即g*tan（）      
@@ -33,7 +35,8 @@ recognition?`。对CNN的结构如何进行选择进行了研究。其结构的�
 <br/>   
 
 __预学习__
------------
+-----------    
+---    
 * [Yann LeCun](http://yann.lecun.com)组基于sparse coding的思路提出的PSD算法。详细阅读下面三篇文章：
 1.  Fast Inference in Sparse Coding Algorithms with Applications to Object Recognition
 2.  Learning Invariant Features through Topographic FilterMaps
@@ -46,6 +49,7 @@ __预学习__
 <br/>     
 
 __开源代码__
------------
+-----------    
+---    
 开源的代码Matlab、Python、Torch、c++的都有。个人推荐[Torch](http://torch.ch/)的。原因很简单，其是[LeCun](http://yann.lecun.com)组的研发的。
 
