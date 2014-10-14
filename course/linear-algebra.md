@@ -59,8 +59,8 @@ $$\hspace{8mm}A^T\vec p  = A^T(\vec b - A\vec x)=0   \\
 \hspace{8mm}投影向量\hspace{4mm} \vec p = A\vec x = A(A^TA)^{-1}A^T\vec b \\
 \hspace{8mm}投影矩阵\hspace{4mm} P = A(A^TA)^{-1}A^T
 $$      
-$$\vec x$$可以理解为$$\vec p$$在`A列空间中的坐标`,$$\vec p$$`可以理解为在原空间中的坐标`
-2.  主要应用是来解决$$A*\vec x=\vec b$$没有解，只能求其最优解。即两边乘以$$A$$的转置$$A^T$$变成$$A^TA\vec x_*=A^T\vec b$$ ，其实 $$\vec x_*$$ 就是$$\vec b$$在`A列空间的投影`。
+当A的列向量为正交基时，$$\vec x$$可以理解为$$\vec p$$在`A列空间中的坐标`
+2.  主要应用是来解决$$A*\vec x=\vec b$$没有解，只能求其最优解。即两边乘以$$A$$的转置$$A^T$$变成$$A^TA\vec x_*=A^T\vec b$$ ，其实 $$A\vec x_*$$ 就是$$\vec b$$在`A列空间中的投影`。
 $$A^TA$$可逆时$$\vec x=(A^TA)^{-1}A^T\vec b$$，不可逆时通过消元来求解。
 3.  $$A^TA$$可逆的充要条件是`A的列线性无关`
 4.  最小二乘直线拟合(求其倒数，使其导数为0，得到一些列等式构造出$$A*\vec x=\vec b$$)、基于squared error的线性回归也可以使用投影的理论来求解(也叫normal equation)等等
