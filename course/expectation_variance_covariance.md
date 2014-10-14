@@ -20,6 +20,7 @@ $$var[f] = E[(f(x)-E[f(x)])^2]   \\
 \hspace{14mm}= E[(f(x)^2 - 2f(x)E[f(x)] + E[f(x)]^2)]  \\    
 \hspace{14mm}= E[f(x)^2] - 2E[f(x)]E[f(x)] + E[f(x)]^2  \\ 
 \hspace{14mm}= E[f(x)^2] - E[f(x)]^2$$    
+__要点:__TODO 偏移方差
 <br/>     
 
 __协方差(Covariance)__        
