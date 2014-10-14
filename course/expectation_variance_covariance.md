@@ -7,6 +7,7 @@ layout: default
 
 __期望(Expectation)__    
 --------
+---    
 也称为均值。$$f(x)$$在概率分布$$p(x)$$下的期望$$E[f]$$的定义如下：    
 1.  离散形式:$$E[f] = \sum_x{f(x)p(x)}$$     
 2.  连续形式:$$E[f] = \int f(x)p(x)dx$$      
@@ -15,16 +16,18 @@ __期望(Expectation)__
 
 __方差(Variance)__        
 --------
+---     
 用来度量随机变量和其数学期望（即均值）之间的偏离程度。$$f(x)$$的方差的定义如下：    
 $$var[f] = E[(f(x)-E[f(x)])^2]   \\
 \hspace{14mm}= E[(f(x)^2 - 2f(x)E[f(x)] + E[f(x)]^2)]  \\    
 \hspace{14mm}= E[f(x)^2] - 2E[f(x)]E[f(x)] + E[f(x)]^2  \\ 
 \hspace{14mm}= E[f(x)^2] - E[f(x)]^2$$    
-__要点:__当样本数为N时，求方差时除以(N-1)得到无偏移方差。详细见[bishop_PRML](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)的`Exercise1.12`    
+__注意__：当样本数为N时，求方差时除以(N-1)得到无偏移方差。详细见[bishop_PRML](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)的`Exercise1.12`    
 <br/>     
 
 __协方差(Covariance)__        
 --------
+---    
 用来度量两个变量之间的相关性。如果两个变量的变化趋势相同，则值为正，反之则为负。其公式如下：    
 __two random variables x and y__    
 $$cov(x,y) = E_{x,y}[(x-E[x])(y-E[y])]   \\
