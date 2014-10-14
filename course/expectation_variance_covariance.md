@@ -20,7 +20,7 @@ $$var[f] = E[(f(x)-E[f(x)])^2]   \\
 \hspace{14mm}= E[(f(x)^2 - 2f(x)E[f(x)] + E[f(x)]^2)]  \\    
 \hspace{14mm}= E[f(x)^2] - 2E[f(x)]E[f(x)] + E[f(x)]^2  \\ 
 \hspace{14mm}= E[f(x)^2] - E[f(x)]^2$$    
-__要点:__TODO 偏移方差
+__要点:__当样本数为N时，求方差时除以(N-1)得到无偏移方差。`详细见bishop_PRML的Exercise1.12`    
 <br/>     
 
 __协方差(Covariance)__        
