@@ -11,6 +11,8 @@ __介绍__
 由[Yann LeCun](http://yann.lecun.com)于1998年在文章`Gradient-Based Learning Applied to Document Recognition`
 中提出。其传统结构如下图所示:<br/>    
 ![cnn_structure](./img/cnn.jpg)
+CNN在层数比较多的情况下还能学习得到比较好的结果的原因，是因为CNN中`滤波核的共享大大降低了网路的复杂度`。其目前也是深度学习中研究
+研究比较多的，且效果比较好的模型。
 <br/>      
 <br/>     
 
