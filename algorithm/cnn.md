@@ -19,7 +19,7 @@ __结构方面的文章__
 ---    
 * [Yann LeCun](http://yann.lecun.com)组由2009年发表了`What is the best multi-stage architecture for object 
 recognition?`。对CNN的结构如何进行选择进行了研究。其结构的主要改变为以下两点：    
-1.  卷积层的激活函数使用在传统的Tan函数前面加上一个系数g，即g*tan（）      
+1.  卷积层的激活函数使用在传统的Tan函数前面加上一个系数g，即g*tan（wx+b）      
 2.  在卷积层与下采样层之间加入LCN（Local Contrast Normalization）归一化层(或降低计算在下采样层后加LCN）     
 <br/>      
 
