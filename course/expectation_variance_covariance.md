@@ -22,7 +22,7 @@ $$var[f] = E[(f(x)-E[f(x)])^2]   \\
 \hspace{14mm}= E[(f(x)^2 - 2f(x)E[f(x)] + E[f(x)]^2)]  \\    
 \hspace{14mm}= E[f(x)^2] - 2E[f(x)]E[f(x)] + E[f(x)]^2  \\ 
 \hspace{14mm}= E[f(x)^2] - E[f(x)]^2$$    
-__注意__：当样本数为N时，求方差时除以(N-1)得到无偏移方差。详细见[bishop_PRML](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)的`Exercise1.12`     
+__注意__：当样本数为N时，求方差时除以(N-1)得到`无偏移方差`。对方差`求期望`就可以观察到，详细见[bishop_PRML](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)的`Exercise1.12`     
 <br/>      
 
 __协方差(Covariance)__        
