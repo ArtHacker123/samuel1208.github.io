@@ -4,7 +4,7 @@ layout: default
 
 __Linear Algebra__
 ------------------
-学习的是MIT的`Introduction to Linear Algebra(Gilbert Strang)`，其[公开课的视频](http://v.163.com/special/opencourse/daishu.html)可以在网易公开课上找到
+学习的是MIT的`Introduction to Linear Algebra(Gilbert Strang)`，其[公开课的视频](http://v.163.com/special/opencourse/daishu.html)可以在网易公开课上找到。个人人为其是线性代数的最好(没有之一)的教程了
 <br/>      
 
 __第一章(Introduction to Vectors)要点__

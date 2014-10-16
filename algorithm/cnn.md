@@ -53,5 +53,5 @@ __预学习__
 __开源代码__
 -----------    
 ---    
-开源的代码Matlab、Python、Torch、c++的都有。个人推荐[Torch](http://torch.ch/)的。原因很简单，其是[LeCun](http://yann.lecun.com)组的研发的。
+开源的代码Matlab、Python、Torch、c++的都有。个人推荐[Torch](http://torch.ch/)。原因很简单，其是[LeCun](http://yann.lecun.com)组的研发的。
 
