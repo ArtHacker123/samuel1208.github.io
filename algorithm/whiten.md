@@ -27,7 +27,7 @@ __ϵ的选择__
 2.  当数据$$X_{rot} \in [0,255]$$时， $$\epsilon \simeq 0.1$$    
 *   分析的方法    
 将λ按大小画出下图，其\episilon大于大多数比较小的特征值，即最好消除途中的`Long tail`    
-![eigenvalues](./img/eigenvalues.png)    
+![eigenvalues](./img/whiten_1.png)    
 <br />
 
 __ZCA_Whiten__
