@@ -2,14 +2,20 @@
 layout: default
 ---
 
-数据白化whitening(也称为球化sphering)，学习之UFLDL（http://deeplearning.stanford.edu/wiki/index.php/Whitening）
+数据白化whitening(也称为球化sphering)，学习之[UFLDL](http://deeplearning.stanford.edu/wiki/index.php/Whitening)。whiten的目的是降低输入数据的冗余。更正式点说法是：    
+     
+1.  降低特征之间的相关性    
+2.  使得所有的特征拥有相同的方差     
+     
+__Whiten Experiment__
+------------    
+---      
+[原始数据](./img/whiten.data)和[实验代码](./img/pca_2d.m)
 
 __PCA_Whiten__
 ------------    
----        
-__步骤__    
-    
-1.  计算数据的协方差矩阵M，并计算协方差矩阵的特征向量矩阵U和特征值向量λ    
+---         
+1.  计算数据的协方差矩阵M，并计算协方差矩阵的特征向量矩阵U和特征值向量$$\lambda$$   
 2.  将数据进行PCA投影，即$$X_{rot}=U^TX_{ori}$$    
 3.  使投影后的数据拥有单位方差，即$$X_{PCAWhiten,i}=\frac{X_{rot,i}}{\sqrt{\lambda_i+\epsilon}}$$ (ϵ起到一个低通滤波的功能)    
 4.  `[Optional]`在第2步的数据投射时，可以进行降维操作      
