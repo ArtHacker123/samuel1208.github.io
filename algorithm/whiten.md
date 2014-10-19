@@ -10,7 +10,8 @@ layout: default
 __Whiten Experiment__
 ------------    
 ---      
-[原始数据](./img/whiten.data)和[实验代码](./img/pca_2d.m)
+[原始数据](./img/whiten.data)和[实验代码](./img/pca_2d.m)    
+__TODO__:: PCA使得数据的协方差成为对角矩阵。ZCA又反投射会原坐标空间，不是又引入相关性了吗。验证以下。
 
 __PCA_Whiten__
 ------------    
