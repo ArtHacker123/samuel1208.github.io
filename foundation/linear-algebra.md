@@ -103,11 +103,15 @@ A$$\vec x = \lambda \vec x$$
 *  __特征值与特征向量可以是虚数__    
 如矩阵[0,-1; 1, 0]
 *  __三角矩阵的特征值就其对角线上的元素__     
+*  __nxn的对称矩阵的特征值可以重复，但是其肯定有n个正交基__    
+*  __SVD分解__    
+$$
+\hspace{4mm}A = U\sumV^T \\
+\hspace{8mm}其中:  \\
+\hspace{12mm}U是AA^T的正交特征向量  \\
+\hspace{12mm}V是A^TA的正交特征向量  \\
+\hspace{12mm}\sum是AA^T或A^TA特征值的平方根形成的对角矩阵
+$$    
+matlab中svd函数求的也是上面的U，$$\sum$$，V,当A是对称矩阵时，其$$A^TA=A^2$$,因此U，V相同且其也是A的特征向量    
 <br/>     
-
-__第七章(Linear Transformations)要点__
-------------
----
-
-<br/>    
-<br/>    
+ 
