@@ -4,14 +4,14 @@ layout: default
 
 __PCA(Principal Component Analysis)__
 ========
-PCA在图像与信号处理中应用非常广泛。主要用来进行降维与一些预处理。PCA处理后会去除不同`特征之间的相关性`。PCA可以理解为寻找一些表达了数据最大方差的线性特征。
+PCA在图像与信号处理中应用非常广泛。主要用来进行降维与一些预处理。PCA处理后`新的特征之间的将不相关性，即新的数据的协方差矩阵为对角阵`。PCA可以理解为寻找一些表达了数据最大方差的线性特征。
 目标函数如下：        
 $$
 \hspace{8mm}{Max}_W \hspace{6mm} var[\sum_{x,y}W(x,y)I(x,y)]  \hspace{6mm} (1)\\
 \hspace{16mm} 其中:  \\
 \hspace{20mm} W(x,y)所要求的一个主要成分，且||W(x,y)||_2  = 1  \\
-\hspace{20mm} I(x,y)表示的是原数据      \\
-\hspace{20mm} \sum_{x,y}W(x,y)W_j(x,y) = 0  W_j(x,y)为前面通过式(1)求得的主要成分  
+\hspace{20mm} I(x,y)表示的是原数据 \\
+\hspace{20mm} \sum_{x,y}W(x,y)W_j(x,y) = 0 \hspace{4mm}(W_j(x,y)为前面通过式(1)求得的主要成分) 
 $$   
 <br />      
      
