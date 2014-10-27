@@ -2,6 +2,8 @@
 layout: default
 ---
 
+__PSD(Predictive Sparse Decomposition)__
+========
 今天的主题是08-11年比较火热的sparse coding。今天谈的算法是[Yann LeCun](http://yann.lecun.com)组[Koray](http://koray.kavukcuoglu.org/index.html)
 的PSD(Predictive Sparse Decomposition)系列算法。其主要的贡献是在`推断过程中不需要再来求解`其稀疏表达，而是使用推断函数来得到近似的稀疏表达。
 

@@ -2,6 +2,8 @@
 layout: default
 ---
 
+__PCA(Principal Component Analysis)__
+========
 PCA在图像与信号处理中应用非常广泛。主要用来进行降维与一些预处理。PCA处理后会去除不同`特征之间的相关性`。PCA可以理解为寻找一些表达了数据最大方差的线性特征。
 目标函数如下：        
 $$
