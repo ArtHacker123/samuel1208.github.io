@@ -75,5 +75,5 @@ __Whiten__
 __Reference__
 -------    
 --- 
-1.  Natural Image Statistics(Aapo Hyvarinen)         
+1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)           
 2.  [Machine Learning open course](https://www.coursera.org/course/ml)      

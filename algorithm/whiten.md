@@ -2,7 +2,7 @@
 layout: default
 ---
 
-数据白化whitening(也称为球化sphering)，学习之[UFLDL](http://deeplearning.stanford.edu/wiki/index.php/Whitening)与Book[1]。whiten的目的是降低输入数据的冗余。更正式点说法是：    
+数据白化whitening(也称为球化sphering)。whiten的目的是降低输入数据的冗余。更正式点说法是：    
      
 1.  降低特征之间的相关性    
 2.  使得所有的特征拥有相同的方差     
@@ -11,8 +11,7 @@ layout: default
 __Whiten Experiment__
 ------------    
 ---      
-[原始数据](./img/whiten.data)和[实验代码](./img/pca_2d.m)    
-__TODO__:: PCA使得数据的协方差成为对角矩阵。ZCA又反投射会原坐标空间，不是又引入相关性了吗。验证以下。       
+[原始数据](./img/whiten.data)和[实验代码](./img/pca_2d.m)          
 <br />         
 
 __PCA_Whiten__
@@ -30,7 +29,7 @@ X_{Whiten,i}=\frac{X_{PCA,i}}{\sqrt{\lambda_i+\epsilon}}    \\
 $$     
 3.  `[Optional]`在第2步的数据投射时，可以进行降维操作      
          
-__ϵ的选择__    
+$$\epsilon$$__的选择__    
 
 *   估计的方法        
 1.  当数据$$X_{rot} \in [−1,1]$$时， $$\epsilon \simeq 10^{-5}$$    
@@ -52,10 +51,11 @@ __方法__
 __Tips__   
 
 *   U是正交矩阵，即$$U^TU=UU^T=I$$    
-*   进行ZCA Whiten的时候， 在PCA Whiten步骤中不做降维操作        
+*   进行ZCA Whiten的时候， `在PCA Whiten步骤中不做降维操作`            
 <br />        
 
 __Reference__
 -------    
 --- 
-1.  Natural Image Statistics(Aapo Hyvarinen)             
+1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)        
+2.  [UFLDL](http://deeplearning.stanford.edu/wiki/index.php/Whitening)        
