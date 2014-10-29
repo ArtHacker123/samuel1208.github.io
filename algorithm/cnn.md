@@ -35,11 +35,8 @@ recognition?`。对CNN的结构如何进行选择进行了研究。其结构的�
 __预学习__
 -----------    
 ---    
-* [Yann LeCun](http://yann.lecun.com)组基于sparse coding的思路提出的PSD算法。详细阅读下面三篇文章：
-1.  Fast Inference in Sparse Coding Algorithms with Applications to Object Recognition
-2.  Learning Invariant Features through Topographic FilterMaps
-3.  Learning Convolutional Feature Hierarchies for Visual Recognition  
-<br/>   
+* [Yann LeCun](http://yann.lecun.com)组基于sparse coding的思路提出的[PSD](./psd.html)算法。        
+详细请查看[PSD Pretraining for CNN](./psd.html#convolutional-psd)
 
 * [Andrew NG](http://www-cs-faculty.stanford.edu/people/ang/)组的文章。详细阅读下面这篇文章：
 1.  Tiled convolutional neural networks
