@@ -4,7 +4,7 @@ layout: default
 
 __Data Normalization__
 ==============    
-本篇主要讨论一些常用的数据归一化方法，以及即相应的影响。这里全部基于2-d的图像来讨论。          
+本篇主要讨论一些常用的数据归一化方法，以及其相应的影响。这里全部基于2-d的图像来讨论。          
 <br />    
 
 __DC Removal__
@@ -55,9 +55,9 @@ __SCN(Spatial constractive Normalization)__
 *  __原理__  
 详细分析见renference[2]和[3]，其步骤如下如下:     
 $$
-\hspace{8mm}\widetilde{I}(c,x,y) = \frac{V(c,x,y)}{max(const, \sigma_{x,y})}  （1）\\ 
+\hspace{8mm}\widetilde{I}(c,x,y) = \frac{V(c,x,y)}{max(const, \sigma_{x,y})}  \hspace{4mm}（1）\\ 
 \hspace{16mm}其中: \\
-\hspace{20mm}V(c,x,y) = I(c,x,y) - \sum_{c,x,y}W_{x,y}I_{c,x+p,y+q}  (2)\\ 
+\hspace{20mm}V(c,x,y) = I(c,x,y) - \sum_{c,x,y}W_{x,y}I_{c,x+p,y+q} \hspace{4mm} (2)\\ 
 \hspace{20mm}c : 为通道索引  \\
 \hspace{20mm}\sum_{c,x,y}W_{x,y} = 1 (一般取高斯核)  \\
 \hspace{20mm}\sigma_{x,y} = \sqrt{\sum_{c,x,y}W(x,y)V^2_{c,x+p,y+q}}  \\ 
