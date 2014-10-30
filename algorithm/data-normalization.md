@@ -53,13 +53,13 @@ __SCN(Spatial constractive Normalization)__
 ------    
 ---    
 *  __原理__  
-详细分析见renference[2]和[3]，其步骤如下如下:     
+详细分析见renference[2]和[3]，其实就是`局部的标准化归一化`。其公式如下:     
 $$
 \hspace{8mm}\widetilde{I}(c,x,y) = \frac{V(c,x,y)}{max(const, \sigma_{x,y})}  \hspace{4mm}（1）\\ 
 \hspace{16mm}其中: \\
 \hspace{20mm}V(c,x,y) = I(c,x,y) - \sum_{c,x,y}W_{x,y}I_{c,x+p,y+q} \hspace{4mm} (2)\\ 
 \hspace{20mm}c : 为通道索引  \\
-\hspace{20mm}\sum_{c,x,y}W_{x,y} = 1 (一般取高斯核)  \\
+\hspace{20mm}\sum_{c,x,y}W_{x,y} = 1 (一般取高斯核或每个权重都相等)  \\
 \hspace{20mm}\sigma_{x,y} = \sqrt{\sum_{c,x,y}W(x,y)V^2_{c,x+p,y+q}}  \\ 
 \hspace{20mm}const = mean(\sigma_{x,y})(此时这个值需要在一个大的数据集上计算出来或者直接取个常数如1)
 $$    
@@ -68,7 +68,8 @@ $$
 在式(1)和(2)中$$W_x,y$$应用在图像边缘时，其外面是补0的。因此边缘处的$$V$$与$$\sigma$$要较中间部分的小。可以乘以一个权重因子进行补偿    
 2.  `在做SCN之前先做标准差归一化后，效果比较平滑，否则会有噪声`    
 因为Std Norm将每个位置的数据方差归一化到了1，压制住了噪声，效果如下:    
-![scn.png](./img/scn.png)    
+![scn.png](./img/scn.png)  
+`(平滑效果好还是带噪声的好，有待讨论。如作为分类的预处理，平滑是否会干掉太多的细节?)`  
 
 <br />    
 
