@@ -81,9 +81,10 @@ $$
 \hspace{20mm}D_k \in R^{s\times s}  \\
 \hspace{20mm}z_k \in R^{(w-s+1)\times (h-s+1)} \\
 \hspace{20mm}W_k \in R^{s \times s} \\
-\hspace{16mm}注意:\\
-\hspace{20mm}公式中第一项D_k*z_k用的是卷积模式是`full` \\
-\hspace{20mm}公式中第三项W_k*x用的是`valid`\\
+\hspace{16mm}\textbf{注意:}\\
+\hspace{20mm}公式中第一项D_k*z_k用的是卷积模式是\textbf{full}模式 \\
+\hspace{20mm}公式中第三项W_k*x用的是\textbf{valid}模式\\
+\hspace{20mm}\textbf{公式中的图像可以是多通道的} \\
 $$    
 
 __训练细节:__    
