@@ -13,7 +13,7 @@ __Sparse Coding__
 传统Sparse Coding的求解过程如下：    
 $$
 \hspace{8mm}min\hspace{4mm}|Z|_0 \hspace{4mm} s.t. \hspace{4mm} x=DZ     \hspace{8mm}(1)\\
-\hspace{16mm}其中:  \\
+\hspace{16mm}\textbf{其中:}  \\
 \hspace{20mm}x \in R^n为输入信号  \\
 \hspace{20mm}Z \in R^m为稀疏编码系数  \\
 \hspace{20mm}D \in R^{m\times n}为基也称为字典\\
@@ -31,7 +31,7 @@ __PSD(Predictive Sparse Decomposition)__
 PSD是由[Koray](http://koray.kavukcuoglu.org/index.html)2008年在文章[1]中提出的。其主要的思想就是在式(2)后面加上一个推断函数。其cost function如下：    
 $$
 \hspace{8mm}L(x,Z;D,P_f) = |x-DZ|^2_2 + \lambda|Z|_1 + \alpha|Z-F(x;P_f)|^2_2 \hspace{4mm}(3)\\
-\hspace{16mm}其中: \\
+\hspace{16mm}\textbf{其中:} \\
 \hspace{20mm}F(x;G,W,B) = Gtanh(Wx+B) \\
 \hspace{20mm}P_f指的是参数{G\in R^{m\times m}的对角矩阵,W\in R^{m\times n},B\in R^m}\\
 $$    
@@ -75,16 +75,16 @@ __Convolutional PSD__
 其cost function如下:        
 $$
 \hspace{8mm}L(x,z,D,W) = \frac{1}{2}|x- \sum_{k=1}^KD_k*z_k|_2^2 + \lambda|z|_1 + \alpha\sum_{k=1}^K|z_k - f(W_k*x)|_2^2 \\
-\hspace{16mm}其中:\\
+\hspace{16mm}\textbf{其中:}\\
 \hspace{20mm}* 表示卷积\\
 \hspace{20mm}x \in R^{w\times h} \\
 \hspace{20mm}D_k \in R^{s\times s}  \\
 \hspace{20mm}z_k \in R^{(w-s+1)\times (h-s+1)} \\
 \hspace{20mm}W_k \in R^{s \times s} \\
 \hspace{16mm}\textbf{注意:}\\
-\hspace{20mm}公式中第一项D_k*z_k用的是卷积模式是\textbf{full}模式 \\
-\hspace{20mm}公式中第三项W_k*x用的是\textbf{valid}模式\\
-\hspace{20mm}\textbf{公式中的图像可以是多通道的} \\
+\hspace{20mm}1)公式中第一项D_k*z_k用的是卷积模式是\textbf{full}模式 \\
+\hspace{20mm}2)公式中第三项W_k*x用的是\textbf{valid}模式\\
+\hspace{20mm}3)\textbf{公式中的图像可以是多通道的} \\
 $$    
 
 __训练细节:__    
