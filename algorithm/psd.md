@@ -79,11 +79,19 @@ $$
 \hspace{20mm}* 表示卷积\\
 \hspace{20mm}x \in R^{w\times h} \\
 \hspace{20mm}D_k \in R^{s\times s}  \\
-\hspace{20mm}z_k \in R^{(w+s-1)\times (h+s-1)} 
-$$
+\hspace{20mm}z_k \in R^{(w-s+1)\times (h-s+1)} \\
+\hspace{20mm}W_k \in R^{s \times s} \\
+\hspace{16mm}注意:\\
+\hspace{20mm}公式中第一项D_k*z_k用的是卷积模式是`full` \\
+\hspace{20mm}公式中第三项W_k*x用的是`valid`\\
+$$    
 
+__训练细节:__    
+在Torhch中的开源代码用的是`FistaL1`与梯度下降的方法。 `Detail(Coming Soon)`    
 
-coming soon    
+__总结:__         
+1.  训练好的推断函数f的输出可以直接当作z的近似表达。作为分类case下的特征来使用    
+2.  上述方法可以用来作为[CNN](./cnn.html)中卷积核的预学习。即将学习好的推断函数f的中W作为[CNN](./cnn.html)中滤波核的初始值    
 <br />  
 
 __Reference__
