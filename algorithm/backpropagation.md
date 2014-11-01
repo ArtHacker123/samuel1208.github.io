@@ -27,16 +27,16 @@ $$
 $$
 \hspace{8mm}\boldsymbol{\frac{\partial{E}}{\partial{w_{k,i}^{(2)}}} = \delta^{(2)}_kz_i}  \\
 \hspace{16mm}其中:\\
-\hspace{20mm}\delta^{(2)}_k = (y_k-t_k)
+\hspace{20mm}\delta^{(2)}_k = (y_k-t_k)\\
 $$    
-    
+      
 *    __第一层推导__    
 $$
 \hspace{8mm}\boldsymbol{\frac{\partial{E}}{\partial{w_{m,i}^{(1)}}} = \delta^{(1)}_mx_i}  \\
 \hspace{16mm}其中:\\
-\hspace{20mm}\delta^{(1)}_m = h^{'}(\vec x^T*\vec w^{(1)}_{m})\sum_{k=1}^{K}\delta_kw^{(2)}_{k,m}
-$$
-
+\hspace{20mm}\delta^{(1)}_m = h^{'}(\vec x^T*\vec w^{(1)}_{m})\sum_{k=1}^{K}\delta_kw^{(2)}_{k,m}\\
+$$    
+<br />
 
 __补充__
 ----------------    
