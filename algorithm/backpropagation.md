@@ -4,18 +4,68 @@ layout: default
 
 __Backpropagation of Neural Network__
 ========
-本文主要就2层(不包含输入层)的full-connect神经网路基于squared error的反向传播算法进行推导。简单起见，参数不考虑偏移b。`只供自娱`    
+本文采用的是2层(不包含输入层)的full-connect神经网路。Loss function使用squared error。且输出层的激活函数为线性函数，即`y=wx`。`只供自娱`    
+<br />
 
-__网路结构__     
-----------    
----       
+__推导__
+----------------    
+---   
+*  __网络结构__     
+![mlp](./img/mlp.png)   
 
-其中:
+
+*    __第二层推导__    
 $$
-W1 \in R^{(n+1) \times m}  \\
-W2 \in R^{m \times o}      \\
-f1 是隐层节点的激活函数     \\
-f2 是输出节点的激活函数    \\ 
+\hspace{8mm}E = \frac{1}{2}\sum_{k=1}^K（y_k-t_k）^2 \\ 
+\hspace{16mm}其中:\\
+\hspace{20mm}y_k = \vec z^T*\vec w^{(2)}_{k}   \\
+\hspace{20mm}\vec z = (1, z_1,..., z_M)^T  \\
+\hspace{8mm}======== \\
+\hspace{8mm}\boldsymbol{\frac{\partial{E}}{\partial{w_{k,i}^{(2)}}} = \delta^{(2)}_kz_i}  \\
+\hspace{16mm}其中:\\
+\hspace{20mm}\delta^{(2)}_k = (y_k-t_k)
+$$    
+
+*    __第一层推导__    
+$$
+\hspace{8mm}z_m = h(\vec x^T*\vec w^{(1)}_{m}) \\
+\hspace{16mm}其中:\\
+\hspace{20mm}\vec x = (1, x_1,..., x_D)^T  \\
+\hspace{8mm}======== \\
+\hspace{8mm}\boldsymbol{\frac{\partial{E}}{\partial{w_{m,i}^{(1)}}} = \delta^{(1)}_mx_i}  \\
+\hspace{16mm}其中:\\
+\hspace{20mm}\delta^{(1)}_m = h^{'}(\vec x^T*\vec w^{(1)}_{m})\sum_{k=1}^{K}\delta_kw^{(2)}_{k,m}
 $$
 
 
+__补充__
+----------------    
+---   
+下面的Loss function是以单个训练样本为例，且输出节点的个数为K。    
+
+*  输出层函数为`sigmod`的loss function为`cross-entropy`。如下:    
+
+$$
+E = \sum_{k=1}^K{t_klny_k + (1-t_k)ln(1-y_k)}
+$$    
+     
+*  输出层函数为`softmax`的loss function为`multiclass cross-entropy`。如下：    
+
+$$
+E = \sum_{k=1}t_klny_k
+$$    
+
+*  输出层函数为`linear`的loss function为`squared error`。 如下：     
+
+$$
+E = \frac{1}{2}\sum_{k=1}^K（y_k-t_k）^2
+$$    
+
+上面三个不同的Loss function对参数$$\vec w_k$$`求导的形式是一样`。即$$\frac{\partial{E}}{\partial{\vec w_k}}=(y_k-t_k)\vec x$$。其中$$y_k=h(\vec w_k^T \vec x)$$
+  `数学的魅力所在`。每个不同的激活函数对应不同的loss function的组合又称为`Canonical link functions`
+<br />    
+
+__References__
+----------------    
+---    
+[bishop_PRML(chapter4-5)](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)
