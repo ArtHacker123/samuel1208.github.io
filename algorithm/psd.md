@@ -85,14 +85,16 @@ $$
 \hspace{20mm}1)公式中第一项D_k*z_k用的是卷积模式是\textbf{full}模式 \\
 \hspace{20mm}2)公式中第三项W_k*x用的是\textbf{valid}模式\\
 \hspace{20mm}3)\textbf{公式中的图像可以是多通道的} \\
-$$    
+$$        
+
+__应用:__         
+1.  训练好的推断函数f的输出可以直接当作z的近似表达。作为分类case下的特征来使用    
+2.  上述方法可以用来作为[CNN](./cnn.html)中卷积核的预学习。即将学习好的推断函数f的中W作为[CNN](./cnn.html)中滤波核的初始值。其结构如下:    
+![conv-psd](./img/conv-psd.png)    
+Convolutional network相当于公式中的`推断函数`。而Deconvolutional network相当于`公式中的第一项`    
 
 __训练细节:__    
-在Torhch中的开源代码用的是`FistaL1`与梯度下降的方法。 `Detail(Coming Soon)`    
-
-__总结:__         
-1.  训练好的推断函数f的输出可以直接当作z的近似表达。作为分类case下的特征来使用    
-2.  上述方法可以用来作为[CNN](./cnn.html)中卷积核的预学习。即将学习好的推断函数f的中W作为[CNN](./cnn.html)中滤波核的初始值    
+在Torhch中的开源代码用的是`FistaL1`与梯度下降的方法。 `Detail(Coming Soon)`
 <br />  
 
 __Reference__
