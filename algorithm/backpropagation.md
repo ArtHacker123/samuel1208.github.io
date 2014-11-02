@@ -38,30 +38,30 @@ $$
 $$
 
 
-__补充__
+__Canonical link functions__
 ----------------    
 ---   
-下面的Loss function是以单个训练样本为例，且输出节点的个数为K。    
+下面以`linear regression`、`logistic regression`、`softmax regression`为例。    
 
-*  输出层函数为`sigmod`的loss function为`cross-entropy`。如下:    
+*  `logistic regression`激活层函数为`sigmod`,loss function为`cross-entropy`。如下:    
 
 $$
-E = \sum_{k=1}^K{t_klny_k + (1-t_k)ln(1-y_k)}
+E = \sum_{n=1}^N{t_nlny_n + (1-t_n)ln(1-y_n)}
 $$    
      
-*  输出层函数为`softmax`的loss function为`multiclass cross-entropy`。如下：    
+*  `softmax regression`激活层函数为`softmax`，loss function为`multiclass cross-entropy`。如下：    
 
 $$
-E = \sum_{k=1}t_klny_k
+E = \sum_{n=1}^{N}\sum_{k=1}^{K}t_{nk}lny_{n,k}
 $$    
 
-*  输出层函数为`linear`的loss function为`squared error`。 如下：     
+*  `linear regression`激活层函数为`linear`，loss function为`squared error`。 如下：     
 
 $$
-E = \frac{1}{2}\sum_{k=1}^K（y_k-t_k）^2
+E = \frac{1}{2}\sum_{n=1}^N（y_n-t_n）^2
 $$    
 
-上面三个不同的Loss function对参数$$\vec w_k$$`求导的形式是一样`。即$$\frac{\partial{E}}{\partial{\vec w_k}}=(y_k-t_k)\vec x$$。其中$$y_k=h(\vec w_k^T \vec x)$$
+上面三个不同的Loss function对参数$$\vec w$$`求导的形式是一样`。即$$\frac{\partial{E}}{\partial{w_i}}=\sum_{n=1}^N(y_n-t_n)x_{n,i}$$。其中$$y_k=h(\vec w^T \vec x)$$
   `数学的魅力所在`。每个不同的激活函数对应不同的loss function的组合又称为`Canonical link functions`
 <br />    
 
