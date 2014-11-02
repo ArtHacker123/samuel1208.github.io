@@ -13,30 +13,30 @@ __推导__
 *  __网络结构__     
 ![mlp](./img/mlp.png)   
 
-
-*    __第二层推导__    
+*    __Loss Function__         
 $$
 \hspace{8mm}E = \frac{1}{2}\sum_{k=1}^K（y_k-t_k）^2 \\ 
 \hspace{16mm}其中:\\
 \hspace{20mm}y_k = \vec z^T*\vec w^{(2)}_{k}   \\
 \hspace{20mm}\vec z = (1, z_1,..., z_M)^T  \\
-\hspace{8mm}======== \\
+\hspace{20mm}z_m = h(\vec x^T*\vec w^{(1)}_{m}) \\
+\hspace{20mm}\vec x = (1, x_1,..., x_D)^T  \\
+$$     
+    
+*    __第二层推导__    
+$$
 \hspace{8mm}\boldsymbol{\frac{\partial{E}}{\partial{w_{k,i}^{(2)}}} = \delta^{(2)}_kz_i}  \\
 \hspace{16mm}其中:\\
-\hspace{20mm}\delta^{(2)}_k = (y_k-t_k)
+\hspace{20mm}\delta^{(2)}_k = (y_k-t_k)\\
 $$    
-
+      
 *    __第一层推导__    
 $$
-\hspace{8mm}z_m = h(\vec x^T*\vec w^{(1)}_{m}) \\
-\hspace{16mm}其中:\\
-\hspace{20mm}\vec x = (1, x_1,..., x_D)^T  \\
-\hspace{8mm}======== \\
 \hspace{8mm}\boldsymbol{\frac{\partial{E}}{\partial{w_{m,i}^{(1)}}} = \delta^{(1)}_mx_i}  \\
 \hspace{16mm}其中:\\
 \hspace{20mm}\delta^{(1)}_m = h^{'}(\vec x^T*\vec w^{(1)}_{m})\sum_{k=1}^{K}\delta_kw^{(2)}_{k,m}
-$$
-
+$$    
+<br />
 
 __Canonical link functions__
 ----------------    
