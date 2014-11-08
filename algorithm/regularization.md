@@ -9,8 +9,7 @@ __Regularization__
 __Dropout__
 -----------
 ---
-[Geoffrey E. Hinton](http://www.cs.toronto.edu/~hinton/)组于2012年的文章`Improving neural networks by preventing co-adaptation of feature detectors`与
-`Dropout: A Simple Way to Prevent Neural Networks from Overfitting`。      
+[Geoffrey E. Hinton](http://www.cs.toronto.edu/~hinton/)组于2012年的文章[1]与[2]      
 __训练时__    
 就是一层的某个元素的值保留的概率为P，其为0的概率为1-P。具体可以表述为如下公式：     
 $$\hspace{4mm}o=M * a(...) \\
@@ -19,7 +18,7 @@ $$\hspace{4mm}o=M * a(...) \\
 \hspace{8mm}M -- 元素为0 or 1的向量  \\
 $$    
 __检测时__   
-需要将加了的dropout的层的输出乘以(1-P)。`或者在训练的时候乘以1/(1-P)，检测的时候则不用进行处理`        
+需要将加了的dropout的层的输出乘以(1-P)。`或者在训练的时候乘以1/(1-P)，检测的时候则不用进行处理(见文章[3])`        
 __注意__：在预学习中使用dropout的时候，也需要将输出放大回来，即乘以1/(1-P)    
 
 __DropConnect__
@@ -37,4 +36,11 @@ __L1__
 ---       
 coming soon    
 
+__References__
+-----------
+---
+
+1.  Improving neural networks by preventing co-adaptation of feature detectors
+2.  Dropout: A Simple Way to Prevent Neural Networks from Overfitting
+3.  Improving deep neural networks for LVCSR using rectified linear units and dropout
 
