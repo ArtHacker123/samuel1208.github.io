@@ -45,8 +45,15 @@ $$
 \hspace{16mm}其中:    \\ 
 \hspace{20mm}\sigma(x,y) = \sqrt{\frac{1}{N}\sum_{n=1}^{N}(I_n(x,y) - \mu(x,y))^2}
 $$   
-* __作用__    
-coming soon    
+* __证明__    
+$$
+\hspace{8mm}初始值 E[x] = u, V[x] = E[(x-u)^2] = \sigma^2 \\ 
+\hspace{8mm}E[\frac{x-u}{\sigma}] = \frac{E[x]-E[u]}{\sigma} = \frac{u-u}{\sigma} = 0 \\
+\hspace{8mm}V[\frac{x-u}{\sigma}] = E[(\frac{x-u}{\sigma})^2] - E[\frac{x-u}{\sigma}] \\
+\hspace{24mm} = E[(\frac{x-u}{\sigma})^2]  \\
+\hspace{24mm} = \frac{E[(x-u)^2]}{\sigma^2} \\
+\hspace{24mm} = 1
+$$    
 <br />    
 
 __SCN(Spatial constractive Normalization)__
