@@ -65,10 +65,9 @@ $$
 \hspace{8mm}epsilon = \sqrt{6}/\sqrt{L_{out}+L_{in}}  \\
 \hspace{8mm}w = torch.uniform(-epsilon, epsilon)
 $$
+这里以输入层与一个隐层为例，$$L_{in}$$与$$L_{out}$$,是指神经网路的整个输入节点数，与与之相连的整个隐层的节点数。这里只适合全链接，不过还是上面的方法通用一点    
 
 *  __Sparse Initialization__       
-
-
 
 <br />
 
