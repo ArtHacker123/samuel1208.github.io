@@ -4,7 +4,7 @@ layout: default
 
 __Training Tricks for Neural Network__
 ========
-本文主要就[Yann LeCun](http://yann.lecun.com)1998年的文章`(Efficient BackProp)`进行学后感的整理。大牛98年就已经给出了这么详细的分析。干货真的很多    
+本文主要就Neural Network的一些训练技巧进行简单的总结    
 <br />
 
 __Stochastic versus Batch learning__     
@@ -29,9 +29,50 @@ Batch的学习过程比较平稳，容易收敛，而Stochastic比较振荡，�
 <br />
 
 
-### __二. 训练样本的处理__  
+__动量__
+--------    
+---    
+*  __CM(Classical Momentum)__    
+$$
+\hspace{8mm}v_{t+1} = \mu v_t - \epsilon f^{'}(\theta _t) \\
+\hspace{8mm}\theta_{t+1} = \theta_t + v_{t+1}  
+$$    
+	
+*  __NAG(Nesterov Accelerated Gradient)__    
+$$
+\hspace{8mm}v_{t+1} = \mu v_t - \epsilon f^{'}(\theta _t + \mu v_t) \\
+\hspace{8mm}\theta_{t+1} = \theta_t + v_{t+1}  
+$$   
+其两者的图形比较如下:    
+![nag_cm](./img/NAG_CM.png)    
+
+1.  文章[2]中Ilya Stutskever使用文章[4]中Sparse Inilitialization，加上NAG达到了文章[4]中的HF的优化效果。
+2.  文章[2]中还指出尤其在$$\mu$$比较大时，NAG的效果更好
+3.  bingo在文章[3]中又对NAG进行了进一步的解释(TODO::看一下)    
+<br />
+
+__参数初始化__
+--------    
+---    
+coming soon
+
+__样本处理__
+--------    
+---    
+coming soon
+
+__激活函数__
+--------    
+---    
+coming soon
 
 
-### __二. 激活函数的选择__  
+__References__
+--------    
+---    
 
+1.  Efficient BackProp    
+2.  On the importance of initialization and momentum in deep learning
+3.  Advances in Optimizing Recurrent Networks
+4.  Deep learning via Hessian-free optimization
 
