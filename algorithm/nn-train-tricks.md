@@ -80,7 +80,11 @@ $$
 这里以输入层与一个隐层为例，$$L_{in}$$与$$L_{out}$$,是指神经网路的整个输入节点数，与与之相连的整个隐层的节点数。这里只适合全链接，不过还是上面的方法通用一点    
 
 *  __Sparse Initialization__       
+详细见文章[2]与[4]。其方法是随机的挑选一些链接，这些链接的参数采样之unit-gaussian(再加上一个缩放因子)。一般偏移取0，tanh激活函数的偏移取0.5。  
 
+>     idx = ceil(rand(1,numconn)*input_num);    
+>     W{i}(j,idx) = randn(numconn,1)*initcoeff;    
+>     此计算的是第i层的第j的节点的参数。numconn为链接的参数不为0的个数   
 <br />
 
 __Input Processing__
