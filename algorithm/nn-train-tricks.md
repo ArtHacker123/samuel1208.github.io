@@ -45,11 +45,23 @@ $$
 $$   
 其两者的图形比较如下:    
 ![nag_cm](./img/NAG_CM.png)    
-
 1.  文章[2]中Ilya Stutskever使用文章[4]中Sparse Inilitialization，加上NAG达到了文章[4]中的HF的优化效果。
 2.  文章[2]中还指出尤其在$$\mu$$比较大时，NAG的效果更好
 3.  bingo在文章[3]中又对NAG进行了进一步的解释(TODO::看一下)    
-<br />
+
+*  __Simplified NAG(Nesterov Accelerated Gradient)__    
+原文见[here](./img/nesterov_simple.pdf)。即在一个偏移的$$\theta$$上进行更新，详细的变动如下:    
+$$
+Set:  \\ 
+\hspace{8mm}\theta^{'}_{t} = \theta_t + \mu v_t \\
+Then:  \\
+\hspace{8mm}v_{t+1} = \mu v_t - \epsilon f^{'}(\theta^{'}_t) \\
+\hspace{8mm}\theta^{'}_{t+1} = \theta^{'}_t - \mu v_t + v_{t+1} + \mu v_{t+1}\\ 
+\hspace{17mm}= \theta_t + v_{t+1} + \mu v_{t+1}\\
+\hspace{17mm}= \theta^{'}_t - v_{t+1} - \epsilon f^{'}(\theta^{'}_t) + v_{t+1} + \mu v_{t+1}\\
+\hspace{17mm}= \theta^{'}_{t} -  \epsilon f^{'}(\theta^{'}_t) + \mu v_{t+1}
+$$      
+<br />    
 
 __Weights Initialization__
 --------    
@@ -64,7 +76,7 @@ $$
 $$
 \hspace{8mm}epsilon = \sqrt{6}/\sqrt{L_{out}+L_{in}}  \\
 \hspace{8mm}w = torch.uniform(-epsilon, epsilon)
-$$
+$$    
 这里以输入层与一个隐层为例，$$L_{in}$$与$$L_{out}$$,是指神经网路的整个输入节点数，与与之相连的整个隐层的节点数。这里只适合全链接，不过还是上面的方法通用一点    
 
 *  __Sparse Initialization__       
