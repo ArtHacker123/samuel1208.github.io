@@ -4,14 +4,14 @@ layout: default
 
 __FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)__
 ========
-2009年的一篇文章[1]，主要用来求解线性逆问题，如$$Min_x\{|Ax-b|^2+\lambda|x|\}$$.[source code](https://github.com/torch/optim/blob/master/fista.lua)
+2009年的一篇文章[1]，主要用来求解线性逆问题，如$$Min_x\{|Ax-b|^2+\lambda|x|\}$$。[source code](https://github.com/torch/optim/blob/master/fista.lua)
 
 
 __ISTA(Iterative Shrinkage-Thresholding Algorithm)__
 -------    
 ---      
 *  __前提:__     
-目标函数可以写成$$min_x\{f(x) + g(x)\}$$，且f(x)和g(x)都是凸函数__   
+目标函数可以写成$$min_x\{f(x) + g(x)\}$$，且f(x)和g(x)都是凸函数   
         
 *  __推导:__   
 求解$$Min\{f(x)\}$$时。梯度下降的迭代公式如下:       
