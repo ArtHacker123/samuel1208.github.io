@@ -22,7 +22,7 @@ $$
 式(1)可以写成如下形式:        
 $$
 \hspace{8mm}x_k = Min_x \{ f(x_{k-1}) + \nabla f(x_{k-1}(x-x_{k-1}) + \frac{1}{2t_k}(x-x_{k-1})^2 \}  \hspace{8mm}(2)\\
-\hspace{16mm}当t_k=\frac{1}{f^{''}(x_k-1)}，其就是泰勒公式展开
+\hspace{16mm}当t_k=\frac{1}{f^{''}(x_{k-1})}，其就是泰勒公式展开
 $$      
 <br />
 当求解 $$Min\{f(x) + \lambda|x|\}$$ 时，式(2)可以简单直接加上g(x)如下:        
