@@ -21,7 +21,7 @@ $$
 <br />
 则所有分辨率组合到一起的特征为:    
 $$
-\Psi (x)=[H_{-1}(x),H_0(x),...,H_L(x)]
+\hspace{4mm}\Psi (x)=[H_{-1}(x),H_0(x),...,H_L(x)]
 $$    
 <br />
 则PMK的相似度定义如下:    
@@ -37,6 +37,7 @@ Normalized Version 1:
 $$
 K_{normalize}(\Psi (x), \Psi (y)) = \frac{K(\Psi (x), \Psi (y))}{min(|x|，|y||)} \hspace{16mm}(2)
 $$    
+<br />
 Normalized Version 2:    
 $$    
 K_{normalize}(\Psi (x), \Psi (y)) = \frac{K(\Psi (x), \Psi (y))}{\sqrt{K_{normalize}(\Psi (x), \Psi (x))*K_{normalize}(\Psi (y), \Psi (y))}}\hspace{16mm}(3)
