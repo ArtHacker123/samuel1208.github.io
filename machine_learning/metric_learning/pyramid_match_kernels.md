@@ -17,6 +17,11 @@ $$
 $$
 \hspace{4mm}H_0(x)的直方图的bin宽度为1   \\
 \hspace{4mm}H_l(x)的直方图的bin宽度为2^l，其维度为(\frac{D}{2^l})^d 
+$$
+<br \>
+则所有分辨率组合到一起的特征为:    
+$$
+\Psi (x)=[H_{-1}(x),H_0(x),...,H_L(x)]
 $$    
 <br />
 则PMK的相似度定义如下:    
@@ -27,9 +32,18 @@ $$
 \hspace{12mm}N_i= I(H_i(x), H_i(y)) - I(H_{i-1}(x), H_{i-1}(y))  \\
 \hspace{12mm}I(H_{-1}(x), H_{-1}(y))=0 \\
 $$   
+<br />
+Normalized Version 1:    
+$$
+K_{normalize}(\Psi (x), \Psi (y)) = \frac{K(\Psi (x), \Psi (y))}{min(|x|，|y||)} \hspace{16mm}(2)
+$$
+Normalized Version 2:    
+$$
+K_{normalize}(\Psi (x), \Psi (y)) = \frac{K(\Psi (x), \Psi (y))}{\sqrt{K_{normalize}(\Psi (x), \Psi (x))*K_{normalize}(\Psi (y), \Psi (y))}}\hspace{16mm}(3)
+$$
 
 *  __补充说明:__    
-1.  $$I(H_i(x), H_i(y))$$为[histogram intersection](./histrogram_intersection.html).
+1.  $$I(H_i(x), H_i(y))$$为[Histogram Intersection](./histrogram_intersection.html).
 2.  $$N_i$$需要减去前一层相交,因为前一层的相交在后一层中也相交 .
 3.  $$w_i$$是根据直方图bin的个数来的。d维边长为$$2^i$$的超立方体点之间的最大距离为$$2^i\sqrt{d}$$ 。
 因为i+1层的直方图的bin为i层的一半(即i+1层最大距离是i层的一半)，因此$$N_{i+1}$$的权重也为$$N_{i}$$的一半。
