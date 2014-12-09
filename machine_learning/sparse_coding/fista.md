@@ -58,7 +58,7 @@ $$
 __FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)__
 --------    
 ---    
-FISTA即在ISTA的基础上使用[NAG momentum](./nn-train-tricks.html#momentum)
+FISTA即在ISTA的基础上使用[NAG momentum](../neural_network/nn-train-tricks.html#momentum)
 <br />     
 
 __References__

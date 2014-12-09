@@ -95,13 +95,13 @@ __Input Processing__
 *  `每次epoch都shuffle一下训练集`    
 神经网路只有在没遇到的训练样本下，学习才会很快， 因此当很多类似的样本在一起时，会降低网路的学习速度    
 
-*  [remove DC](./data-normalization.html#dc-removal)    
+*  [remove DC](../data_process/data-normalization.html#dc-removal)    
 注意[mean normalize]也有remove DC的作用。举个极端的例子，当一个输入样本的所有值都为正时，这是与输入相连的一个节点的所有权重的更新为$$\delta \vec x$$([Delta rule](./backpropagation.html)),$$\vec x$$为输入变量。我们发现所有的权重的更新值的符号都是相同。也就是说权重只能通过zigzagging来改变方向。导致学习没有效率
 
-*  [std normalize](./data-normalization.html#std-normalizetion)    
+*  [std normalize](../data_process/data-normalization.html#std-normalizetion)    
 每一维的特征均值的方差为都拥有相同的方差。这样就把所有的特征的信息scale到同一个尺度上面了(不会有哪个特征重要，哪个特征不重要的情况发生)。`当然这样做也有不好的地方，就是当知道哪些特征不重要时(其方差就应该比其他特征低一些)`
 
-*  [whiten](./whiten.html#whiten)    
+*  [whiten](../data_process/whiten.html#whiten)    
 每一维的特征之间不相关。（TODO:: 具体分析没看明白？）    
 <br />    
 
