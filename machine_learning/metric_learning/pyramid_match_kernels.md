@@ -8,12 +8,12 @@ __PMK(Pyramid Match Kernels)__
 2006年由Kristen Grauman在文章[1]中提出来的算法,其适用于 __unordered、unequal length features__   
 
 *  __Algorithm:__    
-假设特征x为d维，且每一维的长度为$$m_x$$(每个特征的长度可以不一样),即:    
+假设特征$$x^{d \times m_x}$$为d维，且每一维的长度为$$m_x$$(每个特征的长度可以不一样),即:    
 $$
 \hspace{4mm}X = \{x | x = {[f_1^1,...,f_d^1];...;[f_1^{m_x},...,f_d^{m_x}]}\}
 $$    
 <br />
-需要将特征值转换成整数,假设每维特征的值在(1，D)，这里直方图bin的宽度以2的倍数增加，则直方图的分辨率为$$L=log_2D$$，那么    
+这里特征值必须为整数,假设特征值$$f \in (1，D)$$，这里直方图bin的宽度以2的倍数增加，则直方图的分辨率$$L=log_2D$$，那么    
 $$
 \hspace{4mm}H_0(x)的直方图的bin宽度为1   \\
 \hspace{4mm}H_l(x)的直方图的bin宽度为2^l，其维度为(\frac{D}{2^l})^d \\
