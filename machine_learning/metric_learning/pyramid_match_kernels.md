@@ -16,7 +16,7 @@ $$
 这里特征值必须为整数,假设特征值$$f \in (1，D)$$，这里直方图bin的宽度以 __2的倍数__ 增加，则直方图的分辨率$$L=log_2D$$，那么    
 $$
 \hspace{4mm}H_0(x)的直方图的bin宽度为1   \\
-\hspace{4mm}H_l(x)的直方图的bin宽度为2^l，其维度为(\frac{D}{2^l})^d \\
+\hspace{4mm}H_l(x)的直方图的bin宽度为2^l，其维度为(\frac{D}{2^l})^d 
 $$    
 <br />
 则PMK的相似度定义如下:    
@@ -28,7 +28,7 @@ $$
 \hspace{12mm}I(H_{-1}(x), H_{-1}(y))=0 \\
 $$   
 
-*__补充说明:__
+*  __补充说明:__    
 1.  $$I(H_i(x), H_i(y))$$为[histogram intersection](./histrogram_intersection.html).
 2.  $$N_i$$需要减去前一层相交,因为前一层的相交在后一层中也相交 .
 3.  $$w_i$$是根据直方图bin的个数来的。d维边长为$$2^i$$的超立方体点之间的最大距离为$$2^i\sqrt{d}$$ 。
