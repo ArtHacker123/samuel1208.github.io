@@ -13,28 +13,29 @@ $$
 \hspace{4mm}X = \{x | x = {[f_1^1,...,f_d^1];...;[f_1^{m_x},...,f_d^{m_x}]}\}
 $$    
 <br />
-这里特征值必须为整数,假设特征值$$f \in (1，D)$$，这里直方图bin的宽度以2的倍数增加，则直方图的分辨率$$L=log_2D$$，那么    
+这里特征值必须为整数,假设特征值$$f \in (1，D)$$，这里直方图bin的宽度以 __2的倍数__ 增加，则直方图的分辨率$$L=log_2D$$，那么    
 $$
 \hspace{4mm}H_0(x)的直方图的bin宽度为1   \\
 \hspace{4mm}H_l(x)的直方图的bin宽度为2^l，其维度为(\frac{D}{2^l})^d \\
-\hspace{4mm}\Psi (x) = [H_0(x),...,H_L(x)]    
 $$    
 <br />
 则PMK的相似度定义如下:    
 $$
-\hspace{4mm}K(\Psi (x), \Psi (y)) = \sum_{i=0}^Lw_iN_i  \\
+\hspace{4mm}K(\Psi (x), \Psi (y)) = \sum_{i=0}^Lw_iN_i  \hspace{16mm}(1)\\
 \hspace{8mm}其中:\\
 \hspace{12mm}w_i=\frac{1}{2^i} \\
 \hspace{12mm}N_i= I(H_i(x), H_i(y)) - I(H_{i-1}(x), H_{i-1}(y))  \\
+\hspace{12mm}I(H_{-1}(x), H_{-1}(y))=0 \\
 $$   
-其中I(H_i(x), H_i(y))为[histogram intersection](./histrogram_intersection.html).则PMK可以写成如下形式:
-$$
-\hspace{4mm}K(\Psi (x), \Psi (y)) = I(H_0(x), H_0(y)) + \sum_{i=1}^{L}\frac{1}{2^i}{I(H_i(x), H_i(y)) - I(H_{i-1}(x), H_{i-1}(y))}
-$$
 
+*__补充说明:__
+1.  $$I(H_i(x), H_i(y))$$为[histogram intersection](./histrogram_intersection.html).
+2.  $$N_i$$需要减去前一层相交,因为前一层的相交在后一层中也相交 .
+3.  $$w_i$$是根据直方图bin的个数来的。d维边长为$$2^i$$的超立方体点之间的最大距离为$$2^i\sqrt{d}$$ 。
+因为i+1层的直方图的bin为i层的一半(即i+1层最大距离是i层的一半)，因此$$N_{i+1}$$的权重也为$$N_{i}$$的一半。
+即直方图越精细其权重也越大
    
-
-
+   
 __Spatial Pyramid Matching__
 ----------
 ---    
