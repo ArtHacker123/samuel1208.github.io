@@ -16,10 +16,10 @@ $$
 $$    
 *  __说明__        
 1. 上式(2)的Loss不会随着样本数的增加而增加,又称为 Mean Squared Error    
-2. 上式(3)的Loss拥有(2)的属性，其不会随着特征的维数增加而增加
+2. 上式(3)的Loss拥有(2)的属性，且不会随着特征的维数增加而增加
 3. squared loss与linear regression(即$$y(\vec x)=\vec w^t\vec x$$)组合在一起为 __convex__ 的. 
 与logistic regression使用squared error就是 __non-convex__ 问题了    
-<br \>     
+<br />     
 
 __Generalized Squared Loss__
 ----------    
