@@ -5,15 +5,15 @@ layout: default
 __Logistic Regression__
 ==========
 ----    
-即在[linear regression](./linear_regression.html)的基础上加上sigmod函数    
+即在[linear regression](./linear_regression.html)的基础上加上sigmod函数, 用于二分分类    
     
 __Hypothesis__     
 ----    
 ---    
 $$
 \hspace{4mm}h(x) = sigmoid(w_0*x_0 + w_1*x_1 + ... + w_n*x_n)  \\
-\hspace{4mm}其中:\\
-\hspace{8mm}sigmoid(x) = \frac{1}{1+e^{-x}}
+\hspace{8mm}其中:\\
+\hspace{12mm}sigmoid(x) = \frac{1}{1+e^{-x}}
 $$    
        
 __Cost function__    

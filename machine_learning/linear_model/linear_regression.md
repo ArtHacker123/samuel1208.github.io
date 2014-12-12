@@ -8,8 +8,8 @@ __Linear Regression__
 * __Hypothesis__    
 $$
 \hspace{4mm}h(x) = w_0*x_0 + w_1*x_1 + ... + w_n*x_n  \\
-\hspace{4mm}其中:\\
-\hspace{8mm}x_0=1，即w_0为bias
+\hspace{8mm}其中:\\
+\hspace{12mm}x_0=1，即w_0为bias
 $$    
 <br />    
 * __Cost function__    
