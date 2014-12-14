@@ -23,6 +23,19 @@ $$
 $$    
 
 * __Solve__    
-可以用[Gradient Descent](../optim/gradient_descent.html)或[Normal Equation](../../math/linear-algebra.html#orthogonality)的方法求解
+1. 可以用[Gradient Descent](../optim/gradient_descent.html)
+2. [Normal Equation](../../math/linear-algebra.html#orthogonality)    
+当加入[L2 regularization](../optim/regularization.html#l2)时，其等式变为        
+$$
+\theta = (X^TX + \lambda
+\left( \begin{array}{title}
+0 & & & &\\
+& 1&  &&\\
+& & .&&\\
+& & &.&\\
+& & &&1\\
+\end{array} \right)
+)^{-1} X^TT
+$$
 
 

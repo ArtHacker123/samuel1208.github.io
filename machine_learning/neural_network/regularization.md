@@ -26,16 +26,6 @@ __DropConnect__
 ---    
 coming soon    
 
-__L2__
----------     
----     
-coming soon    
-
-__L1__
----------     
----       
-coming soon    
-
 __References__
 -----------
 ---
