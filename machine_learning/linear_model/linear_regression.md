@@ -5,7 +5,8 @@ layout: default
 __Linear Regression__
 ==========
 ---- 
-其也叫最小二乘       
+其也叫最小二乘。以2-D的线性回归为例，寻找其垂直方向上的距离和最短，如下图所示    
+![linear_regression](./img/linear-regression.png)       
 
 * __Hypothesis__      
 $$
