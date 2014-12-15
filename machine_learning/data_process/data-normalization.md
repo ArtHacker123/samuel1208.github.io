@@ -7,6 +7,19 @@ __Data Normalization__
 本篇主要讨论一些常用的数据归一化方法，以及其相应的影响。这里全部基于2-d的图像来讨论。          
 <br />    
 
+__Range Normalize__
+-----
+---    
+* [-1，1]    
+$$
+x = \frac{2x - (max+min)}{max-min} 
+$$     
+* [0, 1]    
+$$
+x=\frac{x - min}{max-min}    
+$$    
+<br />    
+    
 __DC Removal__
 ------    
 ---
