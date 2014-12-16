@@ -33,4 +33,15 @@ $$
 \hspace{11mm}=[t-h_{\boldsymbol{\theta}}(\boldsymbol{x})]*x_i
 $$
 
+* __补充__    
+1.  当样本线性可分时，其会严重过拟合    
+当所有样样本的$$P(C_k|x)=1$$，意味着$$\boldsymbol{w^tx}$$是$$\infty$$或$$-\infty$$,则w的量级为$$\infty$$。
+可以通过weight decay来限制w的量级
+2.  当样本线性可分时，其有多个解    
+任何一条将所有样本分开的分类线都是其解，可以通过weight decay解决
+
+__References__
+----------------    
+---    
+[bishop_PRML(chapter4.3.2)](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)
 
