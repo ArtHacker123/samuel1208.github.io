@@ -5,7 +5,7 @@ layout: default
 __Logistic Regression__
 ==========
 ----    
-即在[linear regression](./linear_regression.html)的基础上加上sigmod激活函数, 用于二分分类    
+即在[linear regression](./linear_regression.html)的基础上加上sigmod激活函数, 用于二分分类,基于torch的[code](./img/logistic.lua)     
     
 * __Hypothesis__        
 $$
@@ -35,10 +35,10 @@ $$
 
 * __补充__    
 1.  当样本线性可分时，其会严重过拟合    
-当所有样样本的$$P(C_k|x)=1$$，意味着$$\boldsymbol{w^tx}$$是$$\infty$$或$$-\infty$$,则w的量级为$$\infty$$。
-可以通过weight decay来限制w的量级
+当所有样样本的$$P(C_k|x)=1$$，意味着$$\boldsymbol{w^tx}$$是$$\infty$$或$$-\infty$$,则w的量级为$$\infty$$
+( __由于计算机的进度问题，一般exp(700)左右就无法表达了,因此不会出现太严重的过拟合__ )。可以通过weight decay来限制w的量级
 2.  当样本线性可分时，其有多个解    
-任何一条将所有样本分开的分类线都是其解，可以通过weight decay解决
+任何一条将所有样本分开的分类线都是其解( __参数的初始值不同，其结果就可能不同__ )，可以通过weight decay解决
 
 __References__
 ----------------    

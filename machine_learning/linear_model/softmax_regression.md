@@ -5,7 +5,7 @@ layout: default
 __softmax Regression__
 ==========
 ----    
-即多类的[logistic regression](./logistic_regression.html)    
+即多类的[logistic regression](./logistic_regression.html)。基于torch的[code](./img/logistic.lua)    
     
 *  __Hypothesis__     
 $$
@@ -23,8 +23,13 @@ $$
 \hspace{16mm}=\frac{1}{1+exp[-\boldsymbol{(\theta^1 - \theta^2)^Tx}]} 
 $$    
 由上可以看出其是个参数冗余的[logistic regression](./logistic_regression.html)    
-<br />    
-
+3. __实现的技巧__    
+一般为了防止exp(x)的值过大，执行如下的操作:    
+$$
+ f_i(x) = \frac{exp(x_i-shift)}{\sum_j exp(x_j-shift)}  \hspace{8mm} shift = \max_i (x_i)
+$$    
+<br />
+    
 *  __Cost function__      
 使用 __Multiclass Cross Entropy__ ,其是 __convex__ 的。其形式如下:    
 $$
