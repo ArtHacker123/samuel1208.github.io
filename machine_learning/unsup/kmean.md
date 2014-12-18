@@ -7,7 +7,7 @@ __K-Means__
 ---   
 * __loss function__    
 $$
-\hspace{4mm}J(c^{(1)}, ..., c^{(M)}, u_1, ..., u_K)＝\frac{1}{M}\sum\limits_{i=1}^{m}{|x^{(i)} - u_{c^{(i)}}|^2} \\
+\hspace{4mm}J(c^{(1)}, ..., c^{(M)}, u_1, ..., u_K)＝\frac{1}{2M}\sum\limits_{i=1}^{m}{|x^{(i)} - u_{c^{(i)}}|^2} \\
 \hspace{8mm}其中:
 \hspace{12mm}u_k 是聚类中心点的位置 \\ 
 \hspace{12mm}c^{(m)} 是第m个样本其归属类的索引（1-K）
