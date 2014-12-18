@@ -54,10 +54,16 @@ __STD Normalizetion__
 *  __原理__    
 标准差归一化就是使`每个位置的像素的均值为0且其每个位置像素的方差为1`(其就是在均值归一化后再除以每个位置像素的标准差)。如下:    
 $$
-\hspace{8mm}\widetilde{I}(x,y) = \frac{I(x,y) - \mu(x,y)}{\sigma(x,y)} \\
+\hspace{8mm}\widetilde{I}(x,y) = \frac{I(x,y) - \mu(x,y)}{\sqrt{var(x,y)}} \\
 \hspace{16mm}其中:    \\ 
-\hspace{20mm}\sigma(x,y) = \sqrt{\frac{1}{N}\sum_{n=1}^{N}(I_n(x,y) - \mu(x,y))^2}
+\hspace{20mm}var(x,y) = \frac{1}{N}\sum_{n=1}^{N}(I_n(x,y) - \mu(x,y))^2
 $$   
+
+为了抑制噪声，一般在方差上加上一个常数项，见文章[4]。则公式变成如下形式:    
+$$
+\hspace{8mm}\widetilde{I}(x,y) = \frac{I(x,y) - \mu(x,y)}{\sqrt{var(x,y)}+const}  \\
+$$     
+
 * __证明__    
 $$
 \hspace{8mm}初始值 E[x] = u, V[x] = E[(x-u)^2] = \sigma^2 \\ 
@@ -100,3 +106,4 @@ __Reference__
 1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)           
 2.  Pinto, Cox. Why is real-world vi- sual object recognition hard? 2008
 3.  Lyu, Simoncelli. Nonlinear image representation using divisive normalization. 2008.
+4.  Learning Feature Representations with K-means
