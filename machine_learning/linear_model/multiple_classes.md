@@ -8,7 +8,7 @@ __Multiple Classes__
 下面以3类问题为例    
 
 * __One Versus the Rest__       
-其需要K-1个分类器，这个方法的不可分区域如下:    
+也叫one_vs_all,其需要K-1个分类器，这个方法的不可分区域如下:    
 ![one_versus_rest](./img/one_versus_rest.png)    
 
 * __One Versus One__       
