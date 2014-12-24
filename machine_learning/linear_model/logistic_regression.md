@@ -5,7 +5,7 @@ layout: default
 __Logistic Regression__
 ==========
 ----    
-即在[linear regression](./linear_regression.html)的基础上加上sigmod激活函数, 用于二分分类,基于torch的[code](./img/logistic.lua)     
+即在[linear regression](./linear_regression.html)的基础上加上sigmod激活函数, 用于二分分类,基于torch的[th linear_model.lua](./img/linear_model.lua)     
     
 * __Hypothesis__        
 $$
