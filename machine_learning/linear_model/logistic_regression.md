@@ -43,5 +43,6 @@ $$
 __References__
 ----------------    
 ---    
-[bishop_PRML(chapter4.3.2)](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)
+1. [bishop_PRML(chapter4.3.2)](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)
+2. A comparison of numerical optimizers for logistic regression
 
