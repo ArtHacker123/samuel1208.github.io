@@ -31,7 +31,7 @@ $$
 __Source Code__
 --------    
 ---    
-[torch7](https://github.com/torch/nn/blob/master/MSECriterion.lua)
+[torch7](https://github.com/torch/nn/)
 
 __References__
 ----------------    

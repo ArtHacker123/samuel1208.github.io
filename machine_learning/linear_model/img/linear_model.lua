@@ -13,7 +13,7 @@ cmd:text('Example:')
 cmd:text('$> th linear_model.lua  --method logistic-regression ')
 cmd:text('$> th linear_model.lua  --method margin')
 cmd:text('Options:')
-cmd:option('-method', 'logistic-regression', 'tmp')
+cmd:option('-method', 'logistic-regression', 'training method')
 cmd:option('-margin', 1, 'margin for the use margin method' )
 cmd:text()
 
@@ -86,7 +86,7 @@ local main_lg=function()
 	confusion = optim.ConfusionMatrix({"1", "2"})
 	optim_para={
 		learningRate  = 1e-1,
-		weightDecay = 0, --0.5e-4, --L2 weight decay  
+		weightDecay = 5e-2, --0.5e-4, --L2 weight decay  
 	}
 
 	para, gradPara = net:getParameters()	
@@ -173,7 +173,7 @@ local main_margin=function()
 	confusion = optim.ConfusionMatrix({"1", "2"})
 	optim_para={
 		learningRate  = 1e-3,
-		weightDecay = 0, --0.5e-4, --L2 weight decay  
+		weightDecay = 5e-2, --0.5e-4, --L2 weight decay  
 	}
 
 	para, gradPara = net:getParameters()	
