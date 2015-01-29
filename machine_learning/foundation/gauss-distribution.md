@@ -16,6 +16,15 @@ $$
 ![gaussian-distribution](./img/gaussian-distribution.png)    
 <br />    
 
+__Multivariate Formular__    
+------    
+---  
+当其为n维时，其形式如下:    
+$$
+\hspace{4mm}\mathcal{N}(\boldsymbol{x|\mu, |\Sigma|^{-1}}) = \frac{1}{(2\pi)^{n/2}|\Sigma|^{1/2}}exp\{-\frac{1}{2}\boldsymbol{(x-\mu)^T\Sigma^{-1}(x-\mu)}\}
+$$     
+<br />    
+
 __Properties__
 ------    
 ---        

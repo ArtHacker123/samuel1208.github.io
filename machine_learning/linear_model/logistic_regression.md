@@ -13,10 +13,16 @@ $$
 $$    
        
 * __Cost function__   
-使用 __Cross Entropy__ ，其是 __convex__ (使用[MSE](../criterion/squared_loss.html)是 __nonconvex__ )，如下:
+使用 __Cross Entropy__ ，其是 __convex__ (使用[MSE](../criterion/squared_loss.html)则为 __nonconvex__ )，如下:
 $$
-\hspace{4mm}E[L]＝ \frac{1}{m}\sum\limits_{i=1}^{m}-[t^iln(h_{\boldsymbol{\theta}}(\boldsymbol{x}^i)+(1-t^i)ln(1-h_{\boldsymbol{\theta}}(\boldsymbol{x}^i)] \\
+\hspace{4mm}E[L]＝ \frac{1}{m}\sum\limits_{i=1}^{m}-\{t^iln[h_{\boldsymbol{\theta}}(\boldsymbol{x}^i)]+(1-t^i)ln[1-h_{\boldsymbol{\theta}}(\boldsymbol{x}^i)]\} \\
 $$     
+其其实是 __Log Maximum Likehood__ ， 推导如下：    
+$$ 
+\hspace{4mm}\boldsymbol{Max}: \hspace{2mm}E[L] = \prod_{i:t^i=1}h(\boldsymbol{x}^i)\prod_{i:t^i=0}(1-h(\boldsymbol{x}^i)) \\
+\hspace{4mm}\boldsymbol{Max}: \hspace{2mm}ln(E[L]) = \sum_{i:t^i=1}ln[h(\boldsymbol{x}^i)] + \sum_{i:t^i=0}ln[1-h(\boldsymbol{x}^i)] \\
+\hspace{4mm}\boldsymbol{Min}: \hspace{2mm}-ln(E[L]) = -\{\sum_{i:t^i=1}ln[h(\boldsymbol{x}^i)] + \sum_{i:t^i=0}ln[1-h(\boldsymbol{x}^i)]\} \\
+$$
 
 * __Gradient__    
 由于    
@@ -35,7 +41,7 @@ $$
 
 * __补充__    
 1.  当样本线性可分时，其会严重过拟合    
-当所有样样本的$$P(C_k|x)=1$$，意味着$$\boldsymbol{w^tx}$$是$$\infty$$或$$-\infty$$,则w的量级为$$\infty$$
+当所有样样本的$$P(C_k|x)=1$$，意味着$$\boldsymbol{w^Tx}$$是$$\infty$$或$$-\infty$$,则w的量级为$$\infty$$
 ( __由于计算机的进度问题，一般exp(700)左右就无法表达了,因此不会出现太严重的过拟合__ )。可以通过weight decay来限制w的量级
 2.  当样本线性可分时，其有多个解    
 任何一条将所有样本分开的分类线都是其解( __参数的初始值不同，其结果就可能不同__ )，可以通过weight decay解决

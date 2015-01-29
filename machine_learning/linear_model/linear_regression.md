@@ -16,7 +16,7 @@ $$
 $$    
 
 * __Cost Function__    
-使用[MSE](../criterion/squared_loss.html),其是 __convex__ 的    
+使用[MSE](../criterion/squared_loss.html),其是 __convex__ 的 __（TODO其loss其实也是通过likehood推导出来的,见bishop）__    
 
 * __Gradient__    
 $$

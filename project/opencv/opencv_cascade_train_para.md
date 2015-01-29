@@ -45,7 +45,7 @@ cascade的层数, default 20
 * __-maxDepth__    
    弱分类器树的深度, default 1    
 * __-weightTrimRate__    
-  todo 搞清楚, default 0.95
+  最新的boost中没有使用。__TODO__ 搞清楚之前的用意, default 0.95
 
 
 

@@ -38,6 +38,6 @@ __Cascade__
 __Open Source__    
 --------    
 ---    
-* [OpenCV Train Cascade](./opencv)
+* [OpenCV Train Cascade](../opencv)
 
 
