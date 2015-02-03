@@ -8,7 +8,7 @@ __LDA(Linear Discriminant Analysis)__
 * __背景__     
 假设$$f_k(x)$$为k类样本基于特征x的概率密度函数，且样本来之于k类的概率为$$\pi_k$$，则根据贝叶斯理论，样本x属于k类的概率为:      
 $$
-\hspace{4mm}P(k|x) = \frac{\pi_kf_k(x)}{\sum_l^K\pi_lf_l(x)}
+\hspace{4mm}P(k|x) =  \frac{P(x|k)P(k)}{P(x)} = \frac{\pi_kf_k(x)}{\sum_l^K\pi_lf_l(x)}
 $$    
 <br />
     
@@ -53,6 +53,16 @@ $$
 $$    
 从上式可以看出其包含x的二次项， __这也是其名字中有Quardic的原因__    
 <br />
+
+* __补充__    
+当特征维数比较多时，其 __协方差矩阵可能不可求__ (LDA也有这个问题)，这时可以假设其协方差矩阵是对角的( __即此时使用的是Naive Bayes__ ):    
+$$
+\hspace{4mm}f_k(\boldsymbol{x})= \prod_{j=1}^{p}f_{jk}(x_j)    \\
+\hspace{8mm} 其中 :p为特征的维数   \\
+\hspace{4mm}\delta_k(\boldsymbol{x})  = ln[\pi_k\prod\limits_{j=1}^pf_{kj}(x_j)]\\
+\hspace{16mm}= \frac{1}{2}\sum\limits_{j=1}^{p}\frac{(x_j-u_{kj})^2}{\sigma_{kj}^2} + ln\pi_k
+$$    
+
 
 __References__
 ----------------    
