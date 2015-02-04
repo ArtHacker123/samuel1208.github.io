@@ -39,8 +39,10 @@ $$
 __当特征维数大于1时__ ，同理可得其$$\delta_k(\boldsymbol{x})$$为:    
 $$
 \hspace{4mm}\delta_k(\boldsymbol{x}) = \boldsymbol{x}^T\Sigma^{-1}\boldsymbol{u_k} - \frac{1}{2}\boldsymbol{u_k^T}\Sigma^{-1}\boldsymbol{u_k}+ ln(\pi_k) \\
-$$
+$$    
 
+* __补充__    
+LDA是 __Generative Learning__ 。因为其是基于P(x,y)的(即P(x,y)可以计算出来)。
 
 __QDA(Quardic Discriminant Analysis)__
 ----    
