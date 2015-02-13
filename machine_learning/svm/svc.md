@@ -2,48 +2,29 @@
 layout: default
 ---
 
-__2-class Margin__
+__Supported Vector Classifier__
 ----------    
 ---   
-*  __公式__    
+解决了[maximal margine cassifier](./mmc.html)的缺点。引入了`Soft Margine`。     
+
+*  __原理__    
 $$
-\hspace{4mm}E[L] = \sum\limits_{i=1}^{m} Max[0, margin - t^i*h_{\boldsymbol{\theta}}(\boldsymbol{x^i})]   \hspace{8mm}(1) \\
-\hspace{8mm}\textbf{其中:}    \\
-\hspace{12mm}t : 采用1或-1 \\
-    \\
-\hspace{8mm}\textbf{检测时:}\\
-\hspace{12mm}t =  \begin{cases} 
-1 \hspace{8mm}h_{\boldsymbol{\theta}}(\boldsymbol{x})>0 \\ 
--1\hspace{4mm}h_{\boldsymbol{\theta}}(\boldsymbol{x})<0
-\end{cases}
+\hspace{4mm} \underbrace{Maximize}_{\beta_0,...,\beta_p, \epsilon_1,...\epsilon_n} \{M\}  \\
+\hspace{4mm} \textbf{Subject}\hspace{4mm} \textbf{to} :  \\
+\hspace{8mm} \sum\limits_{j=1}^p\beta_j^2 = 1 \hspace{4mm}(\textbf{j从1开始，不包含}\beta_0)\\
+\hspace{8mm} y_i(\beta_0 + \beta_1x_{i1}+...+\beta_px_{ip}) \geq M(1-\epsilon_i) \hspace{4mm}\forall i=1,...,n \\
+\hspace{8mm}\epsilon_i \geq 0,  \hspace{4mm}\sum\limits_{i=1}^n\epsilon_i\leq C  \hspace{4mm}\epsilon_i称为松弛变量(slack\hspace{4mm}variable)
 $$        
-    
-* __函数图像__     
-![margin](./img/margin.png)    
-<br />
 
-__multi-class Margin__
-----------    
----       
-*  __Torch 公式__    
-$$
-\hspace{4mm}E[L] = \sum\limits_{i=1}^{m} L_i \hspace{8mm}(2) \\
-\hspace{8mm}\textbf{其中:}    \\
-\hspace{12mm} L_i =\sum\limits_{l=1, l\neq t_i}^{T} Max[0, margin -h_{\boldsymbol{\theta_{t_i}}}(\boldsymbol{x^i}) +h_{\boldsymbol{\theta_l}}(\boldsymbol{x^i})] \\
-\hspace{12mm}t : 采用(1,2,...T)\\
-$$    
+*  __特性__    
+1. 训练集中被分错的样本的个数不可能大于C    
+2. 当C=0时，就是[maximal margine cassifier](./mmc.html)
+3. 此时有两种分错的样本，`margine分错`与`hyperplane分错`。所有的这些分错的样本称为`support vectors`
+4. 只有`support vectors`会影响分类面。被margine正确分类的样本不影响分类面.  
+<br />    
 
-*  __one-vs-all 公式__    
-$$
-\hspace{4mm}E[L] = \sum\limits_{i=1}^{m} L_i \hspace{8mm}(3) \\
-\hspace{8mm}\textbf{其中:}    \\
-\hspace{12mm} L_i =\sum\limits_{l=1}^{T} Max[0, margin - t_l^ih_{\boldsymbol{\theta_{l}}}(\boldsymbol{x^i})] \\
-\hspace{12mm}t : 采用(1,-1,-1,-1)，即只有一个为1，其他都为-1\\
-$$
-
-
-__Source Code__
---------    
+__Reference__
+----    
 ---    
-[torch7](https://github.com/torch/nn/blob/master/)
+1. An Introduction to Statistical Learning (Chapter 9) 
 

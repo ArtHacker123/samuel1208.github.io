@@ -2,48 +2,32 @@
 layout: default
 ---
 
-__2-class Margin__
+__Maximal Margin Classifier__
 ----------    
 ---   
-*  __公式__    
+*  __原理__    
 $$
-\hspace{4mm}E[L] = \sum\limits_{i=1}^{m} Max[0, margin - t^i*h_{\boldsymbol{\theta}}(\boldsymbol{x^i})]   \hspace{8mm}(1) \\
-\hspace{8mm}\textbf{其中:}    \\
-\hspace{12mm}t : 采用1或-1 \\
-    \\
-\hspace{8mm}\textbf{检测时:}\\
-\hspace{12mm}t =  \begin{cases} 
-1 \hspace{8mm}h_{\boldsymbol{\theta}}(\boldsymbol{x})>0 \\ 
--1\hspace{4mm}h_{\boldsymbol{\theta}}(\boldsymbol{x})<0
-\end{cases}
+\hspace{4mm} \underbrace{Maximize}_{\beta_0,...,\beta_p} \{M\}  \\
+\hspace{4mm} \textbf{Subject}\hspace{4mm} \textbf{to} :  \\
+\hspace{8mm} \sum\limits_{j=1}^p\beta_j^2 = 1 \hspace{4mm}(\textbf{j从1开始，不包含}\beta_0)\\
+\hspace{8mm} y_i(\beta_0 + \beta_1x_{i1}+...+\beta_px_{ip}) \geq M \hspace{4mm}\forall i=1,...,n \\
+\hspace{8mm} (y_i\textbf{为-1或者1})
 $$        
-    
-* __函数图像__     
-![margin](./img/margin.png)    
+
+*  __特性__    
+1. 在margine上的点称为`support vectors`
+2. 只有`support vectors`会影响分类面。被margine正确分类的样本不影响分类面    
 <br />
-
-__multi-class Margin__
-----------    
----       
-*  __Torch 公式__    
-$$
-\hspace{4mm}E[L] = \sum\limits_{i=1}^{m} L_i \hspace{8mm}(2) \\
-\hspace{8mm}\textbf{其中:}    \\
-\hspace{12mm} L_i =\sum\limits_{l=1, l\neq t_i}^{T} Max[0, margin -h_{\boldsymbol{\theta_{t_i}}}(\boldsymbol{x^i}) +h_{\boldsymbol{\theta_l}}(\boldsymbol{x^i})] \\
-\hspace{12mm}t : 采用(1,2,...T)\\
-$$    
-
-*  __one-vs-all 公式__    
-$$
-\hspace{4mm}E[L] = \sum\limits_{i=1}^{m} L_i \hspace{8mm}(3) \\
-\hspace{8mm}\textbf{其中:}    \\
-\hspace{12mm} L_i =\sum\limits_{l=1}^{T} Max[0, margin - t_l^ih_{\boldsymbol{\theta_{l}}}(\boldsymbol{x^i})] \\
-\hspace{12mm}t : 采用(1,-1,-1,-1)，即只有一个为1，其他都为-1\\
-$$
+* __缺点__    
+1. 很容易受到一些点的干扰，如下图右图中多了一个点以后，其分类面变化很大    
+![img](./img/1.png)    
+2. 不可以调整margin的大小，即在样本 `都分对的情况下` 容许M适当的变大。见下图的左图    
+3. 当样本不可分的时候，其无法求解。见下图的右图    
+![img](./img/2.png)
 
 
-__Source Code__
---------    
+__Reference__
+----    
 ---    
-[torch7](https://github.com/torch/nn/blob/master/)
+1. An Introduction to Statistical Learning (Chapter 9) 
 
