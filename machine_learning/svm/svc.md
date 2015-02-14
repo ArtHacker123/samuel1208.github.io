@@ -5,7 +5,7 @@ layout: default
 __Supported Vector Classifier__
 ----------    
 ---   
-解决了[maximal margine cassifier](./mmc.html)的缺点。引入了`Soft Margine`。     
+解决了[Maximal Margine Classifier](./mmc.html)的缺点。引入了`Soft Margine`。     
 
 *  __原理__    
 $$
@@ -18,7 +18,7 @@ $$
 
 *  __特性__    
 1. 训练集中被分错的样本的个数不可能大于C    
-2. 当C=0时，就是[maximal margine cassifier](./mmc.html)
+2. 当C=0时，就是[Maximal Margine Classifier](./mmc.html)
 3. 此时有两种分错的样本，`margine分错`与`hyperplane分错`。所有的这些分错的样本称为`support vectors`
 4. 只有`support vectors`会影响分类面。被margine正确分类的样本不影响分类面.  
 <br />    
