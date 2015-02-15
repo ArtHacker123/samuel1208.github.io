@@ -1,13 +1,12 @@
 ---
-layout: default
+layout: page
+title: Linear Regression
 ---
-
-__Linear Regression__
-==========
----- 
 其也叫最小二乘。以2-D的线性回归为例，寻找其垂直方向上的距离和最短，如下图所示    
 ![linear_regression](./img/linear-regression.png)       
 
+#### __原理__
+---
 * __Hypothesis__      
 $$
 \hspace{4mm}h_{\boldsymbol{\theta}}(\boldsymbol{x}) = \boldsymbol{\theta^Tx} = \theta_0*x_0 + \theta_1*x_1 + ... + \theta_n*x_n  \\
@@ -42,8 +41,7 @@ $$
 * __Miscellaneous__      
 1. 其也可以用来分类，如将目标设为1和0.此时的分界面为$$\boldsymbol{\theta^Tx} = 0.5$$. [^Ref1]
 
-__References__
-----------------    
+#### __References__
 ---    
 [^Ref1]: The Elements of Statistical Learning
 

@@ -1,14 +1,12 @@
 ---
-layout: default
+layout: page
+title: Gaussian Distribution
 ---
-
-__Gaussian Distribution__
-====
-又称为 __Normal Distribution__，其中均值为0，标准差为1($$\mathcal{N}(x|0,1)$$)的正太分布又称为 __Standard Normal Distribution__    
+---
+又称为 `Normal Distribution`，其中均值为0，标准差为1($$\mathcal{N}(x|0,1)$$)的正太分布又称为 `Standard Normal Distribution`    
 <br />
 
-__Univariate Formular__    
-------    
+#### __Univariate Formular__     
 ---    
 $$
 \hspace{4mm}\mathcal{N}(x|\mu, \sigma^2) = \frac{1}{(2\pi\sigma^2)^{1/2}}exp\{-\frac{1}{2\sigma^2}(x-\mu)^2\}
@@ -16,8 +14,7 @@ $$
 ![gaussian-distribution](./img/gaussian-distribution.png)    
 <br />    
 
-__Multivariate Formular__    
-------    
+#### __Multivariate Formular__  
 ---  
 当其为n维时，其形式如下:    
 $$
@@ -25,8 +22,7 @@ $$
 $$     
 <br />    
 
-__Properties__
-------    
+#### __Properties__
 ---        
 $$
 1. \hspace{4mm} \int_{-\infty}^{\infty} \mathcal{N}(x|\mu, \sigma^2)dx=1  \\

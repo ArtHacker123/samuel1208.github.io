@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: page
+title: Color Convert
+---
 ---
 
-* __RGB2YCbCr__
----    
+#### __RGB2YCbCr__
+---
 YCbCr其中Y是指亮度分量，Cb指蓝色色度分量，而Cr指红色色度分量。注意 __其与YUV是不一样的__ (转换可以参照torch的源代码)，下面的转换3个通道都在(0~255)的范围内<br />    
 $$
 \hspace{4mm}Y=0.299*R + 0.587*G + 0.114*B    \\
@@ -12,8 +14,8 @@ $$
 $$
      
 
-* __RGB2HSV__   
----   
+#### __RGB2HSV__     
+---
 这里采用opencv的变换规则<br />    
 $$
 \hspace{4mm}V=max(R, G, B)    \\

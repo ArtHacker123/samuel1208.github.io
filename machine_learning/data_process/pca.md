@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: page
+title: PCA(Principal Component Analysis)
 ---
-
-__PCA(Principal Component Analysis)__
-========
 PCA在图像与信号处理中应用非常广泛。主要用来进行降维与一些预处理。PCA处理后`新的特征之间的将不相关性，即新的数据的协方差矩阵为对角阵`。PCA可以理解为寻找一些表达了数据最大方差的线性特征。
 目标函数如下：        
 $$
@@ -15,8 +13,7 @@ $$
 $$   
 <br />      
      
-__求解__
---------    
+#### __Solve__  
 ---      
 上面的优化问题可以通过数据的[协方差矩阵](../../math/expectation_variance_covariance.html#covariance)的[特征值分解](../../math/linear-algebra.html#eigenvalues-and-eigenvectors)来计算。步骤如下:         
 
@@ -24,8 +21,7 @@ __求解__
 2.  将数据进行PCA投影，即$$X_{pca}=U^TX_{ori}$$    
 <br />    
 
-__降维__
---------    
+#### __Dimension Reduction__  
 ---  
 *  __降维度操作__    
 即去除一些特征值比较小的特征向量进行PCA转换。 如下:    
@@ -68,14 +64,12 @@ $$
 2.  `不能使用PCA降维来防止数据过拟合`([Andrew NG的在机器学习公开课里有提到](https://class.coursera.org/ml-005/lecture/88)，但没说具体原因)     
 <br />      
 
-__Whiten__
---------    
+#### __Whiten__
 ---  
 详细见[here](./whiten.html)
 
 
-__Reference__
--------    
+#### __Reference__
 --- 
 1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)           
 2.  [Machine Learning open course](https://www.coursera.org/course/ml)      

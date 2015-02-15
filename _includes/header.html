@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>    
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -13,13 +13,40 @@
         </svg>
       </a>
 
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+      <!-- search function-->
+      <div id="search">
+	<form action="/search" method="get">
+	  <input type="text" id="search-query" name="q" placeholder="Search" autocomplete="on">
+	</form>
       </div>
+ 
+      <section id="search-results" style="display: none;">
+	<p>Search results</p>
+	<div class="entries"></div>
+      </section>
+  
+      {% raw %}
+      <script id="search-results-template" type="text/mustache">
+        {{#entries}}
+	<article>
+	  <h3><a href="{{url}}">{{title}}</a></h3>
+	</article>
+	{{/entries}}
+      </script>
+      {% endraw %}
+  
+      <script src="/js/search.min.js" type="text/javascript" charset="utf-8"></script>  
+      <script type="text/javascript">
+	$(function() {
+	  $('#search-query').lunrSearch({
+	    indexUrl: '/js/index.json',           // URL of the `index.json` index data for your site
+	    results:  '#search-results',          // jQuery selector for the search results container
+	    entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+	    template: '#search-results-template'  // jQuery selector for the Mustache.js template
+	  });
+	});
+      </script>
+      <!--End of  Search function-->
     </nav>
 
   </div>

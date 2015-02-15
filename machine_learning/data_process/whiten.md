@@ -1,22 +1,19 @@
 ---
-layout: default
+layout: page
+title: whiten
 ---
-__Whiten__
-============
 数据白化whitening(也称为球化sphering)。whiten的目的是降低输入数据的冗余。更正式点说法是：    
      
 1.  降低特征之间的相关性    
 2.  使得所有的特征拥有相同的方差      
 <br />              
      
-__Whiten Experiment__
-------------    
+#### __Whiten Experiment__  
 ---      
 [原始数据](./img/whiten.data)和[实验代码](./img/pca_2d.m)          
 <br />         
 
-__PCA_Whiten__
-------------    
+#### __PCA_Whiten__  
 ---         
 __步骤__    
     
@@ -40,10 +37,9 @@ $$\epsilon$$__的选择__
 ![eigenvalues](./img/whiten_1.png)      
 <br />    
 
-__ZCA_Whiten__
-------------    
+#### __ZCA_Whiten__  
 ---    
-__方法__    
+* __方法__    
 根据White数据的性质。即:    
 `任何white的数据乘以一个正交基的方阵，其最终数据还是white(TODO:Proof)`            
 将PCA whiten后的数据反投射到原始的数据空间坐标，即:    
@@ -53,14 +49,12 @@ $$
 \hspace{20mm}    U是原数据协方差矩阵的特征向量矩阵
 $$          
   
-__Tips__   
-
-*   U是正交矩阵，即$$U^TU=UU^T=I$$    
-*   进行ZCA Whiten的时候， `在PCA Whiten步骤中不能做降维操作`，因为white数据只有乘以正交基的`方阵`才是white的。            
+* __Tips__   
+1.  U是正交矩阵，即$$U^TU=UU^T=I$$    
+2.  进行ZCA Whiten的时候， `在PCA Whiten步骤中不能做降维操作`，因为white数据只有乘以正交基的`方阵`才是white的。            
 <br />        
 
-__Reference__
--------    
+#### __Reference__
 --- 
 1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)        
 2.  [UFLDL](http://deeplearning.stanford.edu/wiki/index.php/Whitening)        

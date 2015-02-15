@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: page
+title: Canonical link functions
 ---
-
-__Canonical link functions__
-----------------    
----   
 不同的Active Function对应不同的Loss Function，其组合称为`Canonical link functions`。以[linear regression](linear_regression.html)、[logistic regression](./logistic_regression.html)、[softmax regression](softmax_regression.html)来说，对其Loss Function求导，他们有一个共同的梯度形式，即:    
 $$
 \hspace{4mm}\frac{\partial L}{\partial \theta_i} = (t-h_{\boldsymbol{\theta}}(\boldsymbol{x}))*x_i
@@ -22,7 +19,6 @@ $$
 因此就算`输出与真实值的误差很大`，但是由于激活函数的梯度很小，导致最终反应在参数上的梯度变化几乎没有了。
 <br />    
 
-__References__
-----------------    
+#### __References__  
 ---    
 [bishop_PRML(chapter4)](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)

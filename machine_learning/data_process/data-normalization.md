@@ -1,14 +1,11 @@
 ---
-layout: default
+layout: page
+title: Data normalization
 ---
-
-__Data Normalization__
-==============    
 本篇主要讨论一些常用的数据归一化方法，以及其相应的影响。这里全部基于2-d的图像来讨论。          
 <br />    
 
-__Range Normalize__
------
+#### __Range Normalize__
 ---    
 * [-1，1]    
 $$
@@ -20,8 +17,7 @@ x=\frac{x - min}{max-min}
 $$    
 <br />    
     
-__DC Removal__
-------    
+#### __DC Removal__
 ---
 *  __原理__    
 DC(dirrect current)来源于电子工程中的直流电。简单点的说就是移除本身的均值，其使得`整张图像的均值为0`，如下:    
@@ -34,8 +30,7 @@ $$
 coming soon    
 <br />    
 
-__Mean Normalizetion__
-------    
+#### __Mean Normalizetion__
 ---
 *  __原理__    
 均值归一化就是使`每个位置的像素的均值为0`(注意其和DC Removal的区别)。如下:    
@@ -48,8 +43,7 @@ $$
 coming soon    
 <br />    
 
-__STD Normalizetion__
-------    
+#### __STD Normalizetion__  
 ---
 *  __原理__    
 标准差归一化就是使`每个位置的像素的均值为0且其每个位置像素的方差为1`(其就是在均值归一化后再除以每个位置像素的标准差)。如下:    
@@ -75,8 +69,7 @@ $$
 $$    
 <br />    
 
-__SCN(Spatial constractive Normalization)__
-------    
+#### __SCN(Spatial constractive Normalization)__  
 ---    
 *  __原理__  
 详细分析见renference[2]和[3]，其实就是`局部的标准化归一化`。其公式如下:     
@@ -100,8 +93,7 @@ $$
 <br />    
 
 
-__Reference__
--------    
+#### __Reference__  
 --- 
 1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)           
 2.  Pinto, Cox. Why is real-world vi- sual object recognition hard? 2008

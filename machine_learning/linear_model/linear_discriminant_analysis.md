@@ -1,18 +1,17 @@
 ---
-layout: default
+layout: page
+title: LDA(Linear Discriminant Analysis)
 ---
-
-__LDA(Linear Discriminant Analysis)__
-----  
----- 
-* __背景__     
+#### __背景__
 假设$$f_k(x)$$为k类样本基于特征x的概率密度函数，且样本来之于k类的概率为$$\pi_k$$，则根据贝叶斯理论，样本x属于k类的概率为:      
 $$
 \hspace{4mm}P(k|x) =  \frac{P(x|k)P(k)}{P(x)} = \frac{\pi_kf_k(x)}{\sum_l^K\pi_lf_l(x)}
 $$    
 <br />
     
-* __原理__     
+#### __LDA__     
+---
+* __原理__    
 LDA __假设1__ 每个类的样本分布符合Gaussian分布，则LDA使用每个类的gaussian分布函数作为这个类的概率密度函数。这里以一维特征为例，k类样本的gaussian分布函数为:    
 $$
 \hspace{4mm}f_k(x)= \frac{1}{(2\pi\sigma_k^2)^{1/2}}exp\{-\frac{1}{2\sigma_k^2}(x-\mu_k)^2\}
@@ -42,11 +41,13 @@ $$
 $$    
 
 * __补充__    
-LDA是 __Generative Learning__ 。因为其是基于P(x,y)的(即P(x,y)可以计算出来)。
+LDA是 __Generative Learning__ 。因为其是基于P(x,y)的(即P(x,y)可以计算出来)。    
+<br />    
 
-__QDA(Quardic Discriminant Analysis)__
-----    
----- 
+
+
+#### __QDA(Quardic Discriminant Analysis)__
+--- 
 * __原理__    
 QDA与LDA的唯一区别就是没有LDA的 __假设2__ , 根据[multi-gaussian distributuin](../foundation/gauss-distribution.html#multivariate-formular),可以得到其$$\delta_k(\boldsymbol{x})$$为:    
 $$
@@ -66,8 +67,7 @@ $$
 $$    
 
 
-__References__
-----------------    
+#### __References__   
 ---    
 1. An Introduction to Statistical Learning
 

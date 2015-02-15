@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
+title: Margin
 ---
 
-__2-class Margin__
-----------    
+#### __2-class Margin__
 ---   
 *  __公式__    
 $$
@@ -22,8 +22,7 @@ $$
 ![margin](./img/margin.png)    
 <br />
 
-__multi-class Margin__
-----------    
+#### __multi-class Margin__ 
 ---       
 *  __Torch 公式__    
 $$
@@ -42,8 +41,7 @@ $$
 $$
 
 
-__Source Code__
---------    
+#### __Source Code__
 ---    
 [torch7](https://github.com/torch/nn/blob/master/)
 
