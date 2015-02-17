@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: page
+title: Histrogram Intersection
 ---
-
-__Histrogram Intersection__
-==============    
 1991年文章[1]中最先提出来的一种计算直方图相似度的算法    
 
 *    __Formula__         
@@ -21,7 +19,6 @@ $$
 
 
 
-__References__    
-------
+#### __References__    
 ----    
 1.  Color Indexing

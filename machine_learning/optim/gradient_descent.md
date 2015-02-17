@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: page
+title: Gradient Descent
 ---
-
-__Gradient Descent__
-==========
-----    
 * __Goal__       
 $$
 \hspace{4mm}Min \hspace{2mm}J(\theta_0, \theta_1..., \theta_n)  

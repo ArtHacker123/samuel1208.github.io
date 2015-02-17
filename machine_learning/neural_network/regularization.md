@@ -1,13 +1,10 @@
 ---
-layout: default
+layout: page
+title: NN Regularization
 ---
-
-__Regularization__
-=============
 正则化（Regularization）的目的是为了防止过拟合，即为了防止学习模型只是对训练集有很好的表现，而对其他不在训练集的样本则效果不好。
 
-__Dropout__
------------
+#### __Dropout__
 ---
 [Geoffrey E. Hinton](http://www.cs.toronto.edu/~hinton/)组于2012年的文章[1]与[2]      
 __训练时__    
@@ -21,15 +18,12 @@ __检测时__
 需要将加了的dropout的层的输出乘以(1-P)。`或者在训练的时候乘以1/(1-P)，检测的时候则不用进行处理(见文章[3])`        
 __注意__：在预学习中使用dropout的时候，也需要将输出放大回来，即乘以1/(1-P)    
 
-__DropConnect__
----------     
+#### __DropConnect__  
 ---    
 coming soon    
 
-__References__
------------
+#### __References__
 ---
-
 1.  Improving neural networks by preventing co-adaptation of feature detectors
 2.  Dropout: A Simple Way to Prevent Neural Networks from Overfitting
 3.  Improving deep neural networks for LVCSR using rectified linear units and dropout

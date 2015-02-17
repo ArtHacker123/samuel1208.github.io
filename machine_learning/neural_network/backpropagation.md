@@ -1,14 +1,11 @@
 ---
-layout: default
+layout: page
+title: Backpropagation of Neural Network
 ---
-
-__Backpropagation of Neural Network__
-========
 本文采用的是2层(不包含输入层)的full-connect神经网路。Loss function使用squared error。且输出层的激活函数为线性函数，即`y=wx`。`只供自娱`    
 <br />
 
-__推导__
-----------------    
+#### __推导__  
 ---   
 *  __网络结构__     
 ![mlp](./img/mlp.png)   
@@ -38,7 +35,6 @@ $$
 $$    
 <br />
 
-__References__
-----------------    
+#### __References__ 
 ---    
 [bishop_PRML(chapter5)](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)

@@ -1,14 +1,11 @@
 ---
-layout: default
+layout: page
+title: FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)
 ---
-
-__FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)__
-========
-2009年的一篇文章[1]，主要用来求解线性逆问题，如$$Min_x\{|Ax-b|^2+\lambda|x|\}$$。[source code](https://github.com/torch/optim/blob/master/fista.lua)
+2009年的一篇文章1，主要用来求解线性逆问题，如$$Min_x\{|Ax-b|^2+\lambda|x|\}$$。[source code](https://github.com/torch/optim/blob/master/fista.lua)
 
 
-__ISTA(Iterative Shrinkage-Thresholding Algorithm)__
--------    
+#### __ISTA__   
 ---      
 *  __前提:__     
 目标函数可以写成$$min_x\{f(x) + g(x)\}$$，且f(x)和g(x)都是凸函数   
@@ -55,15 +52,13 @@ f(x_k) <= f(x_{k-1}) + \nabla f(x_{k-1}(x-x_{k-1}) + \frac{1}{2t_k}(x-x_{k-1})^2
 $$    
 <br />    
 
-__FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)__
---------    
+#### __FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)__ 
 ---    
 FISTA即在ISTA的基础上使用[NAG momentum](../neural_network/nn-train-tricks.html#momentum)
 <br />     
 
 __References__
 ---------    
----
-    
+---    
 1. A Fast Iterative Shrinkage-Thresholding Algorithm for Linear Inverse Problems
 

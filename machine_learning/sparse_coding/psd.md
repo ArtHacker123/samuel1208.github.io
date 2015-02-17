@@ -1,14 +1,12 @@
 ---
-layout: default
+layout: page
+title: PSD(Predictive Sparse Decomposition)
 ---
 
-__PSD(Predictive Sparse Decomposition)__
-========
 今天的主题是08-11年比较火热的sparse coding。今天谈的算法是[Yann LeCun](http://yann.lecun.com)组[Koray](http://koray.kavukcuoglu.org/index.html)
 的PSD(Predictive Sparse Decomposition)系列算法。其主要的贡献是在`推断过程中不需要再来求解`其稀疏表达，而是使用`推断函数来得到近似的稀疏表达`。
 
-__Sparse Coding__
--------    
+####  __Sparse Coding__  
 ---   
 传统Sparse Coding的求解过程如下：    
 $$
@@ -25,8 +23,7 @@ $$
 基于样本集学习的时候，一般是先固定D学习Z，然后再固定Z学习D，如此反复迭代只到收敛。`推断时，固定D，通过式(2)求解不同样本的Z，在推断时进行求解显然性能上不允许`    
 <br />    
 
-__PSD(Predictive Sparse Decomposition)__    
--------    
+#### __PSD(Predictive Sparse Decomposition)__      
 ---   
 PSD是由[Koray](http://koray.kavukcuoglu.org/index.html)2008年在文章[1]中提出的。其主要的思想就是在式(2)后面加上一个推断函数。其cost function如下：    
 $$
@@ -46,8 +43,7 @@ __推断时,有两种方法求解Z__
 2.  `直接使用推断函数F(x;G,W,B)`    
 <br />       
 
-__Topographic PSD__
--------    
+#### __Topographic PSD__  
 ---   
 2009年[Koray](http://koray.kavukcuoglu.org/index.html)在文章[2]中基于文章[1]引入了地形学`(即相似的特征组织在一起)`属性。如下图所示:    
 ![Topographic map](./img/psd_1.png)    
@@ -64,8 +60,7 @@ $$
 2.  字典B与推断函数分开学习(即上面PSD学习时的第一种情况$$\alpha=0$$)，`会导致的推断函数的近似结果不够稀疏,且训练时间加长`    
 <br />    
 
-__Convolutional PSD__
--------    
+#### __Convolutional PSD__
 ---   
 2010年[Koray](http://koray.kavukcuoglu.org/index.html)在文章[3]中提出的。其主要解决了如下两个问题:    
 
@@ -102,8 +97,7 @@ __训练细节:__
     
 <br />    
 
-__Reference__
--------    
+#### __Reference__ 
 ---     
 
 1.  Kavukcuoglu, LeCun. Fast inference in sparse coding algorithms with applications to object recognition. 2008         

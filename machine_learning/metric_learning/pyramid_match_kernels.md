@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: page
+title: PMK(Pyramid Match Kernels)
 ---
-
-__PMK(Pyramid Match Kernels)__
-----------
----    
 2006年由Kristen Grauman在文章[1]中提出来的算法,其适用于 __unordered、unequal length features__   
 
 *  __Algorithm:__    
@@ -62,8 +59,7 @@ $$
 $$    
 <br/>
    
-__Spatial Pyramid Matching__
-----------
+#### __Spatial Pyramid Matching__
 ---    
 2006年Svetlana Lazebnik在文章[2]中基于文章[1]提出引入空间的信息,即按照 __图像的位置信息__ 来量化直方图，方法如下:     
 ![spatial_pmk](./img/spatial_pmk.png)    
@@ -82,8 +78,7 @@ $$
 文章中作者提出一种超过BOW的特征。基于很多子图像块使用聚类算法，先聚出如200个中心点(即M=200)。然后每幅图像进行二维扫描得到每个子块属于哪个类的索引。基于这个2-D的索引图，得到每个金字塔层的直方图。
 <br />
 
-__References__    
-------
+#### __References__    
 ----    
 1.  Pyramid Match Kernels: Discriminative Classification with Sets of Image Features
 2.  Beyond bags of features: spatial pyramid matching for recognizing natural scene categories

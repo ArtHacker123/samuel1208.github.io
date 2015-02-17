@@ -1,17 +1,12 @@
 ---
-layout: default
+layout: page
+title: Training Tricks for Neural Network
 ---
-
-__Training Tricks for Neural Network__
-========
 本文主要就Neural Network的一些训练技巧进行简单的总结    
-<br />
 
-__Stochastic versus Batch learning__     
-----------    
+#### __Stochastic versus Batch learning__     
 ---   
-    
-### __一. Pros of Stochastic Learning__     
+* __Pros of Stochastic Learning__     
 1.  __学习过程比Batch Learning快__      
 假设样本集中有10个样本，然后每个样本生成9个自身的copy，这样就有100个样本。
 Stochastic只需要10个样本就完成了一个epoch。
@@ -21,7 +16,7 @@ Stochastic只需要10个样本就完成了一个epoch。
 3.  __可以用来跟踪学习样本的变化__       
 样本的变化，会立即反应到训练中，这也是其另一个名字Online Lerning的由来
 
-###  __二. Pros of Batch Learning__     
+*  __Pros of Batch Learning__     
 1.  __学习的过程比较平稳__    
 Batch的学习过程比较平稳，容易收敛，而Stochastic比较振荡，因此一般Stochastic的学习率都比较小。可以采用mini-batch来折衷，`既可以跳过局部最小，也可以相对平稳`      
 2.  __一些加速算法只能用在Batch模式下(如:conjugate gradient，hessian-based)__   
@@ -29,8 +24,7 @@ Batch的学习过程比较平稳，容易收敛，而Stochastic比较振荡，�
 <br />
 
 
-__Momentum__
---------    
+#### __Momentum__   
 ---    
 *  __CM(Classical Momentum)__    
 $$
@@ -63,8 +57,7 @@ Then:  \\
 $$      
 <br />    
 
-__Weights Initialization__
---------    
+#### __Weights Initialization__  
 ---    
 *  __Lecun's Advice__    
 $$
@@ -87,8 +80,7 @@ $$
 >     此计算的是第i层的第j的节点的参数。numconn为链接的参数不为0的个数   
 <br />
 
-__Input Processing__
---------    
+#### __Input Processing__
 ---         
 详细分析见文章[1]    
 
@@ -105,8 +97,7 @@ __Input Processing__
 每一维的特征之间不相关。（TODO:: 具体分析没看明白？）    
 <br />    
 
-__Active Function__
---------    
+#### __Active Function__  
 ---    
 如下图:    
 ![sigmoid](./img/sigmoid.png)    
@@ -115,8 +106,7 @@ __Active Function__
 2. `hyperbolic tangent`函数的缺点是，其error surface在0点(0点初值为0，其变动比较小)与两个极端点初比较平坦， 即其有3个饱和的区域(左图只有在两端饱和)。 `因此在参数初始化时，应避免参数的值比较小，落入到`hyperbolic tangent`的0点附近的饱和区`    
 <br />    
 
-__Learning Rate__
---------    
+#### __Learning Rate__    
 ---    
 *  每个权重都应有自己各自的学习率(所有2介导数的方法的目标)    
 *  神经网路的越是前几层的，其参数的学习率越要大    
@@ -125,10 +115,8 @@ __Learning Rate__
 
 <br />
 
-__References__
---------    
----    
-
+#### __References__
+---   
 1.  Efficient BackProp    
 2.  On the importance of initialization and momentum in deep learning
 3.  Advances in Optimizing Recurrent Networks

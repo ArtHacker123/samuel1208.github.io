@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: page
+title: Supported Vector Classifier
 ---
-
-__Supported Vector Classifier__
-----------    
----   
 解决了[Maximal Margine Classifier](./mmc.html)的缺点。引入了`Soft Margine`。     
 
 *  __原理__    
@@ -23,8 +20,7 @@ $$
 4. 只有`support vectors`会影响分类面。被margine正确分类的样本不影响分类面.  
 <br />    
 
-__Reference__
-----    
+#### __Reference__   
 ---    
 1. An Introduction to Statistical Learning (Chapter 9) 
 

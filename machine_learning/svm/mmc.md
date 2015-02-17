@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: page
+title: Maximal Margin Classifier
 ---
 
-__Maximal Margin Classifier__
-----------    
----   
 *  __原理__    
 $$
 \hspace{4mm} \underbrace{Maximize}_{\beta_0,...,\beta_p} \{M\}  \\
@@ -26,8 +24,7 @@ $$
 ![img](./img/2.png)
 
 
-__Reference__
-----    
+#### __Reference__ 
 ---    
 1. An Introduction to Statistical Learning (Chapter 9) 
 
