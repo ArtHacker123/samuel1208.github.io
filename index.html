@@ -3,29 +3,31 @@ layout: default
 ---
 
 <div class="home">
-  <table style="border-width: 0px; padding: 0px; margin: 0px; border-spacing: 0px; border-collapse: collapse;">
-	<tr>
-        <td width=70 align=left><h1 class="page-heading"><a href="{{"/math/"|prepend:site.baseurl }}">Math</a></h1></td>
-	<td width=120 align=center><h1 class="page-heading"><a href="{{"/machine_learning/"|prepend:site.baseurl }}">Machine_Learning</a></h1></td>
-        <td width=200 align=center><h1 class="page-heading"><a href="{{"/computer_vision/"|prepend:site.baseurl }}">Computer_Vision</a></h1></td>
-	<td width=80 align=center><h1 class="page-heading"><a href="{{"/project/"|prepend:site.baseurl }}">Project</a></h1></td>
-	</tr> 	
-  </table>
-  <hr width=auto size=4 color=#00ffff align=left shade>
 
-  <table>
-	<tr>
-	    <td><img src="/img/profile.jpg" ></td>
-	    <td>
-		  <ul>
-            <h4 class="name" >ShenFei</h4>
-			<h4 class="email" >shenfei1208@gmail.com</h4>  
-	 		<h4 class="address" >China.HangZhou</h4>  
-	 	  </ul>
-        </td>
-	</tr> 	
-  </table>
-  <hr width=auto size=4 color=#00ffff align=left shade>
-  
+<table>
+  <tr>
+    <td valign="top">
+        <img src="/img/profile.jpg">
+        <hr width=auto size=3 color=#00ffff align=left shade>
+        <h2><a href="{{"/math/"|prepend:site.baseurl }}">Mathematics</h2>
+        <h2><a href="{{"/machine_learning/"|prepend:site.baseurl }}">Machine Learning</h2>
+        <h2><a href="{{"/computer_vision/"|prepend:site.baseurl }}">Computer Vision</h2>
+        <h2><a href="{{"/project/"|prepend:site.baseurl }}">Project</h2>
+    </td>   
+    <td style="border-left: 3px solid green; padding: 5px;"></td>
+    <td valign="top">      
+      <h2>News and Updates</h2>
+      <hr width=auto size=3 color=#00ffff align=left shade>
+      <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        </li>
+        {% endfor %}
+      </ul>
+    </td>   
+  </tr>   
+</table>  
 
 </div>
