@@ -15,7 +15,7 @@ $$
      
 #### __Solve__  
 ---      
-上面的优化问题可以通过数据的[协方差矩阵](../../math/expectation_variance_covariance.html#covariance)的[特征值分解](../../math/linear-algebra.html#eigenvalues-and-eigenvectors)来计算。步骤如下:         
+上面的优化问题可以通过数据的[协方差矩阵](../foundation/expectation_variance_covariance.html#covariance)的[特征值分解](../../math/linear-algebra.html#eigenvalues-and-eigenvectors)来计算。步骤如下:         
 
 1.  计算数据的协方差矩阵M`(如果各维度特征的量纲不在一个级别，可以除以标准差进行归一化,不会改变特征值，一般图像处理中不进行归一化)`，并计算协方差矩阵的特征向量矩阵U和特征值$$\lambda$$`(特征值的对角矩阵也是PCA旋转后协方差矩阵)`
 2.  将数据进行PCA投影，即$$X_{pca}=U^TX_{ori}$$    
