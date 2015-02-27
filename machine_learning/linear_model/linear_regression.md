@@ -41,6 +41,7 @@ $$
 * __Miscellaneous__      
 1. 其也可以用来分类，如将目标设为1和0.此时的分界面为$$\boldsymbol{\theta^Tx} = 0.5$$. [^Ref1]
 
+
 #### __References__
 ---    
 [^Ref1]: The Elements of Statistical Learning

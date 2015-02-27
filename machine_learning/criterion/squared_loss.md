@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Squared Loss
+title: Residual Sum of Squares(RSS)
 ---
 ---   
 $$
@@ -15,10 +15,11 @@ $$
 * __说明__        
 1. 上式(2)的Loss不会随着样本数的增加而增加,又称为 Mean Squared Error    
 2. 上式(3)的Loss拥有(2)的属性，且不会随着类的个数增加而增加    
+3. `当使用RSS时，特征数必须大于样本数`， 以线性回归为例，经过一个点的直线有无穷个，经过2个点的平面也是无穷个    
 <br />    
 
 
-#### __Generalized Squared Loss__ 
+#### __Generalized RSS__ 
 ---     
 其又称为 `Minkowski loss` ,见bishop_PRML page48。 引入了$$L_n$$-norm,以及条件概率分布p(x,t)。其形式如下:    
 $$
