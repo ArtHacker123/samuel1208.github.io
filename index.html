@@ -7,23 +7,20 @@ layout: default
 <table>
   <tr>
     <td valign="top">
-        <img src="/img/profile.jpg">
-        <hr width=auto size=3 color=#00ffff align=left shade>
-        <h2><a href="{{"/math/"|prepend:site.baseurl }}">Mathematics</h2>
-        <h2><a href="{{"/machine_learning/"|prepend:site.baseurl }}">Machine Learning</h2>
-        <h2><a href="{{"/computer_vision/"|prepend:site.baseurl }}">Computer Vision</h2>
-        <h2><a href="{{"/project/"|prepend:site.baseurl }}">Project</h2>
+        <img src="/img/profile.png">
+        <h3><a href="{{"/math/"|prepend:site.baseurl }}">Mathematics</h3>
+        <h3><a href="{{"/machine_learning/"|prepend:site.baseurl }}">Machine Learning</h3>
+        <h3><a href="{{"/computer_vision/"|prepend:site.baseurl }}">Computer Vision</h3>
+        <h3><a href="{{"/project/"|prepend:site.baseurl }}">Project</h3>
     </td>   
-    <td style="border-left: 3px solid green; padding: 5px;"></td>
+    <td style="border-left: 2px solid white; padding: 5px;"></td>
     <td valign="top">      
-      <h2>News and Updates</h2>
-      <hr width=auto size=3 color=#00ffff align=left shade>
+      <h3>News and Updates</h3>
+      <hr width=auto size=2 color=#00ffff align=left shade>
       <ul class="post-list">
         {% for post in site.posts %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        </li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</h4>        
         {% endfor %}
       </ul>
     </td>   
