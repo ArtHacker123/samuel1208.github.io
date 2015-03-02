@@ -2,7 +2,7 @@
 layout: page
 title: FISTA(Fast Iterative Shrinkage-Thresholding Algorithm)
 ---
-2009年的一篇文章1，主要用来求解线性逆问题，如$$Min_x\{|Ax-b|^2+\lambda|x|\}$$。[source code](https://github.com/torch/optim/blob/master/fista.lua)
+2009年的一篇文章1，主要用来求解线性逆问题，如 $$\underset{x}{Min}\{\|Ax-b\|^2+\lambda \|x\|_1\}$$ 。[source code](https://github.com/torch/optim/blob/master/fista.lua)
 
 
 #### __ISTA__   
