@@ -61,7 +61,7 @@ $$
         
 *  __应用场景__     
 1.  降维来减少内存的消耗，以及提高性能
-2.  `不能使用PCA降维来防止数据过拟合`([Andrew NG的在机器学习公开课里有提到](https://class.coursera.org/ml-005/lecture/88)，但没说具体原因)     
+2.  `不能使用PCA降维来防止数据过拟合`([Andrew NG的在机器学习公开课里有提到](https://class.coursera.org/ml-005/lecture/88)，但没说具体原因)。但其其实也可以作为一种regularization(见[3]p230，像L1、L2一样，表面上看其是降低了特征的维数，`但其实其限制是通过一些线性组合来约束原特征空间的参数`）     
 <br />      
 
 #### __Whiten__
@@ -73,3 +73,4 @@ $$
 --- 
 1.  [Natural Image Statistics](http://www.naturalimagestatistics.net/)(Chapter 5)           
 2.  [Machine Learning open course](https://www.coursera.org/course/ml)      
+3.  An Introduction to Statistical Learning

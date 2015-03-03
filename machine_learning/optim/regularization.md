@@ -6,7 +6,7 @@ title: Regularization
 
 #### __L2__    
 ---     
-也称为欧氏距离，即    
+也称为weight decay(即欧氏距离)    
 $$       
 \hspace{4mm}|\boldsymbol{w}|^2_2 = |w_0|^2 + |w_1|^2 + ... + |w_n|^2 
 $$    
@@ -14,7 +14,7 @@ $$
 
 #### __L1__ 
 ---    
-也称为曼哈顿距离，即    
+也称为Lasso(即曼哈顿距离)，具有特征选择的功能     
 $$       
 \hspace{4mm}|\boldsymbol{w}|_1 = |w_0| + |w_1| + ... + |w_n| 
 $$    
