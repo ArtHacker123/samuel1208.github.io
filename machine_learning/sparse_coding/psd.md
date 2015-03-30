@@ -62,12 +62,11 @@ $$
 
 #### __Convolutional PSD__
 ---   
-2010年[Koray](http://koray.kavukcuoglu.org/index.html)在文章[3]中提出的。其主要解决了如下两个问题:    
+2010年[Koray](http://koray.kavukcuoglu.org/index.html)在文章[3]中提出的。其主要就是解决了Deconvolutional Networks的求解问题:    
 
-1.  一般的sparse coding都是基于图像中的小块(patch)来做的。即上面公式中的`Y`是图像中的随机子块。本文采用整张图像,参考之文章[4]
-2.  传统的sparse coding求解时，还要去求稀疏表达。本文才用上面的推断函数来进行表达    
+>一般的sparse coding都是基于图像中的小块(patch)来做的。即上面公式中的Y是图像中的随机子块。`Deconvolutional Networks`(文章[4])解决了这个问题，其基于整张图像,`Deconvolutional Networks`的缺点是对于新的输入X，还要根据D去求解稀疏表达(太耗时间)。`Convolutional PSD`采用推断函数解决了其求解慢的问题    
 
-其cost function如下:        
+__Convolutional PSD的Loss如下__(`去掉最后一项就是Deconvolutional Networks的Loss`）:    
 $$
 \hspace{8mm}L(x,z,D,W) = \frac{1}{2}|x- \sum_{k=1}^KD_k*z_k|_2^2 + \lambda|z|_1 + \alpha\sum_{k=1}^K|z_k - f(W_k*x)|_2^2 \\
 \hspace{16mm}\textbf{其中:}\\

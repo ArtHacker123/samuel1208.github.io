@@ -16,7 +16,8 @@ $$
 *  __特性__    
 1. 训练集中被分错的样本的个数不可能大于C    
 2. 当C=0时，就是[Maximal Margine Classifier](./mmc.html)
-3. 此时有两种分错的样本，`margine分错`与`hyperplane分错`。所有的这些分错的样本称为`support vectors`
+3. 此时有两种分错的样本，`margine分错`与`hyperplane分错`。所有`这些分错的与margine上的样本统称为support vectors`，如下图右图中(1,2,4,8,9,11,12)    
+![img](./img/2.png)
 4. 只有`support vectors`会影响分类面。被margine正确分类的样本不影响分类面.  
 <br />    
 

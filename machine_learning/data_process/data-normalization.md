@@ -5,7 +5,7 @@ title: Data normalization
 本篇主要讨论一些常用的数据归一化方法，以及其相应的影响。这里全部基于2-d的图像来讨论。          
 <br />    
 
-#### __Range Normalize__
+#### __Range Normalization__
 ---    
 * [-1，1]    
 $$
@@ -30,7 +30,7 @@ $$
 coming soon    
 <br />    
 
-#### __Mean Normalizetion__
+#### __Mean Normalization__
 ---
 *  __原理__    
 均值归一化就是使`每个位置的像素的均值为0`(注意其和DC Removal的区别)。如下:    
@@ -43,7 +43,7 @@ $$
 coming soon    
 <br />    
 
-#### __STD Normalizetion__  
+#### __STD Normalization__  
 ---
 *  __原理__    
 标准差归一化就是使`每个位置的像素的均值为0且其每个位置像素的方差为1`(其就是在均值归一化后再除以每个位置像素的标准差)。如下:    

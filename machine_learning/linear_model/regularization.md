@@ -20,6 +20,11 @@ $$
 $$    
 当$$w_0$$为bias时，一般不加入惩罚项
 
+#### __注意点__
+---    
+1. 在做Regularization的时候，特征一定要做[STD](../data_process/data-normalization.html#std-normalization),使得每个特征的量纲是一样的。`否则结果将有很强的偏向性`    
+<br />
+
 #### __References__
 ---
 1. [bishop_PRML](http://research.microsoft.com/en-us/um/people/cmbishop/prml/)
