@@ -6,7 +6,7 @@ title: KMean
 #### __Classic k-means__ 
 ---   
 
-* __loss function__    
+* __loss function(Minimize the within-cluster variation)__    
 $$
 \hspace{4mm}J(c^{(1)}, ..., c^{(M)}, u_1, ..., u_K)＝\frac{1}{2M}\sum\limits_{i=1}^{m}{|x^{(i)} - u_{c^{(i)}}|^2} \\
 \hspace{8mm}其中:
