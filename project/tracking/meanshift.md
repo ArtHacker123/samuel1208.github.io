@@ -35,13 +35,20 @@ $$
 
 #### __Implementation__  
 ---      
+
 * __文章[2]__   
-1. 使用`Gaussian Kernel`，其中$$h \to \infty$$,即k(z)=1(因为$$z=||\frac{x-x_i}{h}||^2 \to \infty$$).
-2. 通过[直方图反射](../../computer_vision/histgram/histgram_backproject.html)计算$$w_i$$    
+1.使用`Gaussian Kernel`，其中$$h \to \infty$$,即k(z)=1(因为$$z=||\frac{x-x_i}{h}||^2 \to \infty$$)    
+2.通过[直方图反射](../../computer_vision/histgram/histgram_backproject.html)计算$$w_i$$    
+<br />
+
+* __文章[3]__   
+1.建议使用`Epanechnikov Kernel`，因为当z<1时，k'(z)为常数     
+2.计算$$w_i$$的方法与文章[2]不同，见文中公式10    
 <br />
 
 #### __References__        
 ---  
 1.  Mean Shift: A Robust Approach Toward Feature Space Analysis
 2.  Computer Vision Face Tracking For Use in a Perceptual User Interface
+3.  Kernel-Based Object Tracking
 
