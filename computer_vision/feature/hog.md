@@ -9,32 +9,45 @@ Hog是一种__局部特征__，由Dalal和Triggs在文章[1]中提出，并使�
 
 > 1. 图像灰度化
 > 2. gamma矫正(影响不大可省略, 即$$I(x,y)=I(x,y)^{gamma}$$) 
-> 3. 将图像划分成小的cell(如6x6)单元，统计其梯度方向的直方图(9个bin,且0-180最佳)
-> 4. 基于cell组成block，相邻的block之间的cell可以有重叠,将block内所有cell的直方图并在一起，即为block的特征
+> 3. 将图像划分成小的cell(如6x6)单元，统计cell的梯度方向直方图
+> 4. 基于cell组成block，相邻的block之间的cell可以有重叠,将block内所有cell的直方图合并在一起，并进行归一化，得到局部block的特征（`最终的特征维数为：(block的个数)X(block内的cell个数)X(方向bin的大小`）
 
-
-
-#### __实验细节__    
+#### __实现细节__    
 --- 
 
+* __cell梯度方向直方图统计__    
+`使用三次插值，即角度、X、Y方向的插值`效果最好        
+1. __其角度方向插值__   
+![hog_1](./img/hog_1.png)    
+如上图，85度其有1/4在70bin中，3/4在90bin中，`且采用循环模式，即0度有1/2在10bin中，1/2在170bin中`    
+2. __X，Y方向的插值__    
+![hog_2](./img/hog_2.png)    
+上图中黑色cell内的像素点对其上下左右4个cell都有贡献, __`注意边缘处cell的值需要进行补偿`__
+
+* __block的划分__    
+![hog_3](./img/hog_3.png)    
+1. (左图)每个block由4个cell组成，一个block特征由4个cell直方图组成(`block的维数比cell少1`)，并归一化
+2. (右图)每个cell使用不同block的模值归一化，生成4个直方图合并block的特征（`block的维数与cell相等`）
+
+* __block内直方图的归一化__    
+1. `L1-norm`     
+$$\vec{v} = \vec{v}/(|\vec{v}|_1+\epsilon)$$     
+2. `L1-sqrt`     
+$$\vec{v} = \sqrt{\vec{v}/(|\vec{v}|_1+\epsilon)}$$     
+3. `L2-norm`    
+$$\vec{v} = \vec{v}/\sqrt{|\vec{v}|^2_2+\epsilon^2}$$      
+4. `L2-Hys(效果最好)`      
+先进行L2-norm操作,然后执行$$v_i=MIN(v_i, th)$$, th一般为0.2    
+
+#### __注意事项__    
+--- 
 * 求梯度前不要进行模糊操作，`如Gaussian、Median等，其会严重影响性能`    
-* 求梯度模板越简单越好，文章中使用`[-1, 0, 1]`效果最好,即
+* 求梯度模板越简单越好，文章中使用`[-1, 0, 1]`效果最好,即:    
 $$
-G_x (x,y)=I (x+1,y)-I (x-1,y)  \\
+G_x (x,y)=I (x+1,y)-I (x-1,y)  \\    
 G_y (x,y)=I (x,y+1)-I (x,y-1)
 $$
 
-* 在进行方向统计时(`使用二次插值`)，可以用梯度幅值直接作为权重，或幅值的函数如（`取平方根，平方, 取整, 实验表明：梯度幅值最好`）
-
-
-* 划分成不同的block,对每一个block内的特征向量进行归一化    
-(注意此处是向量归一化，即$$\vec{v}/\sqrt{|\vec{v}|^2}  \hspace{8mm}  \sqrt{|\vec{v}|^2} = \sqrt{x_0^2+x_1^2+... +x_n^2}$$)
-
-# L1-norm : $$\vec{v}/(|\vec{v}|_1+\epsilon)$$ 基数1表示进行1次归一化操作     
-# L1-sqrt : $$\sqrt{\vec{v}/(|\vec{v}|_1+\epsilon)}$$ 基数1表示进行1次归一化操作     
-# L2-norm : $$\vec{v}/\sqrt{|\vec{v}|^2_2+\epsilon^2}$$ 基数2表示进行2次归一化操作     
-# L2-Hys : 进行L2-norm操作，并第一次操作中：设一个（如threshold=0.2）， 大于threshold的都设为0.2    
-L2-Hys效果最好
 
 
 #### __References__
