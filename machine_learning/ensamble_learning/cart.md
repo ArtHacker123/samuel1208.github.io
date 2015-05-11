@@ -22,19 +22,25 @@ title: CART(Classification and Regression Tree)
 分类中常用的准则有`Gini Index`与`Cross-Entropy`，不要用分类错误率`(It turns out that classification error is not sufficiently sensitive for tree-growing)`    
 
 * __Gini-Index__    
+`集合D上的Gini Index定义如下`:    
 $$
-G = \sum\limits_{m=1}^{M}\sum\limits_{k=1}^{K}p_{mk}(1-p_{mk})\\
+G(D) = \sum\limits_{k=1}^{K}p_{k}(1-p_{k}) = 1-\sum\limits_{k=1}^{K}p_{k}^2\\
 其中: \\
-\hspace{4mm}M为leaf节点的个数 \\
-\hspace{4mm}K为class的个数 
+\hspace{4mm}p_k为样本是k类的概率
 $$    
+<br />
+`则stump二叉树的Gini Index的定义为`:    
+$$ 
+Gini(D) = \frac{N_l}{N}Gini(D_l) + \frac{N_r}{N}Gini(D_r)  \\
+其中: \\
+\hspace{4mm}N为总样本数，N_l,N_r分别为左右节点的总样本数
+$$ 
 
 * __Cross-Entropy__    
 $$
-D = -\sum\limits_{m=1}^{M}\sum\limits_{k=1}^{K}p_{mk}ln(p_{mk})\\
+D = -\sum\limits_{k=1}^{K}p_kln(p_k)\\
 其中: \\
-\hspace{4mm}M为leaf节点的个数 \\
-\hspace{4mm}K为class的个数 
+\hspace{4mm}p_k为样本是k类的概率
 $$    
 
 * __Exercises__    
