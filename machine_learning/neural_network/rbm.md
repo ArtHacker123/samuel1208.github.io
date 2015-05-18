@@ -54,13 +54,13 @@ $$
 \hspace{4mm}\frac{\partial logP(\mathbf{v}|\theta)}{\partial a_{i}} = <v_i>_{data}-<v_i>_{model} \\
 \hspace{4mm}\frac{\partial logP(\mathbf{v}|\theta)}{\partial b_{j}} = <h_j>_{data}-<h_j>_{model} \\
 $$    
-由上面知，联合概率分布不可求，因此上式中的第二项不可以直接求，可以通过[Gibbs采样](../foundation.html)来近似。但通常情况下需要使用较大的采样步数，这使得RBM的训练效率仍旧不高，2002年hinton于文章[2]中提出了`Constrastive Divergence`, 即使用重构的数据来近似联合分布<br/>     
+由上面知，联合概率分布不可求，因此上式中的第二项不可以直接求，可以通过[Gibbs采样](../foundation.html)来近似。但通常情况下需要使用较大的采样步数，这使得RBM的训练效率仍旧不高，2002年hinton于文章[2]中提出了`Constrastive Divergence`, 即使用基于训练样本的重构数据来近似联合分布<br/>     
 $$
 \hspace{4mm}\frac{\partial logP(\mathbf{v}|\theta)}{\partial W_{ij}} = <v_ih_j>_{data}-<v_ih_j>_{recon}\\
 \hspace{4mm}\frac{\partial logP(\mathbf{v}|\theta)}{\partial a_{i}} = <v_i>_{data}-<v_i>_{recon} \\
 \hspace{4mm}\frac{\partial logP(\mathbf{v}|\theta)}{\partial b_{j}} = <h_j>_{data}-<h_j>_{recon} \\
 $$<br />       
-其训练的详细步骤如下:    
+其训练的详细步骤如下(使用的是$$CD_1$$,即只做了一次的重构，`其可以是多次`)    
 ![img](./img/cd.png)    
 <br />    
 
