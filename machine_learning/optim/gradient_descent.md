@@ -26,4 +26,4 @@ $$
 
 #### __References__
 ---
-[网上教材](http://class.htu.cn/nla/chat5/sect5_1.htm)，并提供了一种确定步长的方法
+[参考教材](http://class.htu.cn/nla/chat5/sect5_1.htm)，并提供了一种确定步长的方法
