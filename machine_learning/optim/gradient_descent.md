@@ -23,3 +23,7 @@ $$
 3.  $$\alpha$$定了以后，下降的步长会越来越小， 因为梯度是越来越小的
 4.  Feature Normalization可以加快收敛的速度    
 <br />    
+
+#### __References__
+---
+[网上教材](http://class.htu.cn/nla/chat5/sect5_1.htm)，并提供了一种确定步长的方法
