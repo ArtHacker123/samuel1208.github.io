@@ -32,10 +32,11 @@ Deep Learning的热潮是由2006年Hinton的[DBN](dbn.html)引发的，Deep Lear
 
 #### __Network in Network__    
 ---
-其与2014年在文章[6]中提出的,其主要贡献有两点:    
+其与2014年在文章[6]中提出的，本质上`就是在传统的CNN的卷积层后面再加上一层滤波核大小为1x1的卷积层`:    
 
-1. 使用`MLP(神经网路)`代替卷积层中的卷积滤波核，称其为mlpconv    
-如何将不同map之间的进行链接？
+1. 使用`MLP(神经网路)`代替卷积层中的卷积滤波核，称其为mlpconv, 如下图:       
+![image](./img/nin.jpg)    
+如上图，其将不同的Feature map的相同位置区域组合在一起作为输入，`其相当于在传统的CNN的卷积层(NxL_hx滤波核大小)后面再加上一层滤波核大小为1x1的（即L_hxL_ox1x1）的卷积层`
 2. 使用`全局平均采样`来代替CNN中的分类器层    
 即将最后一个Feature Map的大小设为类的个数，然后计算每个Feature Map里平均值，然后丢个softmax，其起到了`regularizer`的作用。
 
