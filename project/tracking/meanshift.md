@@ -25,11 +25,11 @@ $$
 设 $$\mathbf{g(z=\|\frac{x-x_i}{h}\|^2) = -k'(z)}$$,则:    
 $$
 \hspace{4mm}\frac{\partial p(x)}{\partial x} =\frac{2c_{k,d}}{nh^{d+2}}\sum\limits_{i=1}^{n}(x_i-x)g(z)w_i \\
-\hspace{15mm} = \frac{2c_{k,d}}{nh^{d+2}}[\sum\limits_{i=1}^{n}g(z)w_i][\frac{x_i\sum\limits_{i=1}^{n}g(z)w_i}{\sum\limits_{i=1}^{n}g(z)w_i} -x] 
+\hspace{15mm} = \frac{2c_{k,d}}{nh^{d+2}}[\sum\limits_{i=1}^{n}g(z)w_i][\frac{\sum\limits_{i=1}^{n}x_ig(z)w_i}{\sum\limits_{i=1}^{n}g(z)w_i} -x] 
 $$    
 `则极值点的位置为`:    
 $$
-\hspace{4mm}\mathbf{x=\frac{x_i\sum\limits_{i=1}^{n}g(z)w_i}{\sum\limits_{i=1}^{n}g(z)w_i}}
+\hspace{4mm}\mathbf{x=\frac{\sum\limits_{i=1}^{n}x_ig(z)w_i}{\sum\limits_{i=1}^{n}g(z)w_i}}
 $$    
 <br />
 
