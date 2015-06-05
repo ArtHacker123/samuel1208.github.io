@@ -48,7 +48,8 @@ Deep Learning的热潮是由2006年Hinton的[DBN](dbn.html)引发的，Deep Lear
 
 #### __GoogleNet__    
 ---
-其与2014年在文章[7]中基于`Network in Network`的改进
+其与2014年在文章[7]中基于`Network in Network`与VGG(文章[10])的改进。其主要目的摘子原文:    
+`The main idea of the Inception architecture is based on finding out how an optimal local sparse structure in a convolutional vision network can be approximated and covered by readily available dense components`
 
 *  其他关于网路结构方面的文章    
 文章[8]    
@@ -78,4 +79,5 @@ Deep Learning的热潮是由2006年Hinton的[DBN](dbn.html)引发的，Deep Lear
 7. Going deeper with convolutions
 8. An Analysis of the Connections Between Layers of Deep Neural Network
 9. Clustering Learning for Robotic Vision
+10. Very deep convolutional networks for large-scale image recognition
 
