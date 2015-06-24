@@ -2,7 +2,7 @@
 layout: page
 title: PCA(Principal Component Analysis)
 ---
-PCA在图像与信号处理中应用非常广泛。主要用来进行降维与一些预处理。PCA处理后`新的特征之间的将不相关性，即新的数据的协方差矩阵为对角阵`。PCA可以理解为寻找一些表达了数据最大方差的线性特征。
+PCA在图像与信号处理中应用非常广泛。主要用来进行降维与一些预处理。PCA处理后`新的特征之间的将不相关性，即新的数据的协方差矩阵为对角阵`。PCA可以理解为`寻找一些表达了数据最大方差的线性特征`, 其假设数据是符合`Gaussian`分布的。
 目标函数如下：        
 $$
 \hspace{8mm}{Max}_W \hspace{6mm} var[\sum_{x,y}W(x,y)I(x,y)]  \hspace{6mm} (1)\\
