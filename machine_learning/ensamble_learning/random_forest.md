@@ -27,6 +27,12 @@ $$
 
 <br />
 
+#### __Random Ferns__
+---
+> 单个Fern的构建：假设有D为特征，则随机挑选S个特征，并在这S个特征上随机的挑选一个阈值进行分割。则最终有$$2^S$$个leaf节点。Random Ferns即将多个Ferns结合在一起,详细见文章[2]    
+
+<br />
+
 #### __Boosting Tree__    
 ---    
 Boosting Tree用在回归上时，是不断的减少检测值与真实值之间的residual。`分类时，其比较复杂，暂时不提供`
@@ -50,3 +56,4 @@ Coming soon
 #### __References__    
 ---
 1.  An Introduction to Statistical Learning with Applications in R
+2.  Fast keypoint recognition using random ferns
