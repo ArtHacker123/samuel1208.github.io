@@ -124,6 +124,9 @@ $$H(x) = sign[\sum_{t=1}^Th_t(x)-b]$$     b是个阈值默认为0
 $$
 {Conf}_H(x) = |\sum_{t=1}^Th_t(x)-b|
 $$    
+
+* __效果__    
+在人脸检测上，与`Real Adaboost`相比较，其`Recal`要好`Real Adaboost`,但是误检也会高一点
 <br />    
 
 
