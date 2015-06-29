@@ -46,13 +46,20 @@ Deep Learning的热潮是由2006年Hinton的[DBN](dbn.html)引发的，Deep Lear
 2. `CNN + Fully Connected`、`CNN + Fully Connected+dropout`、`CNN + 全局平均采样`：全局平均采样比全连接好，没有dropout好    
 <br />     
 
+#### __VGG__    
+---
+基于`Network in Network`的扩展实验，使用卷积层`加深网路的深度`，详细见文章[10]     
+<br />    
+
 #### __GoogleNet__    
 ---
-其与2014年在文章[7]中基于`Network in Network`与VGG(文章[10])的改进。其主要目的摘子原文:    
-`The main idea of the Inception architecture is based on finding out how an optimal local sparse structure in a convolutional vision network can be approximated and covered by readily available dense components`
+其与2014年在文章[7]中基于`Network in Network`与VGG(文章[10])的改进，使用卷积层`加深网路的宽度`，其主要目的摘之原文:    
+`The main idea of the Inception architecture is based on finding out how an optimal local sparse structure in a convolutional vision network can be approximated and covered by readily available dense components`    
+<br />
 
-*  其他关于网路结构方面的文章    
-文章[8]    
+#### __Miscellaneous__    
+---
+其他关于网路结构方面的文章[8]    
 <br />    
 
 #### __Pre-Train__    
