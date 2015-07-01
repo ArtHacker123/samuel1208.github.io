@@ -4,7 +4,7 @@ title: Mahalanobis Distance
 ---
 马氏距离又称为Statistical Distance，两点间的马氏距离定义如下：            
 $$
-\hspace{8mm}\d(p_1,p_2) = \sqrt{(p_1-p_2)^tS^{-1}(p_1-p_2)}     \\
+\hspace{8mm}d(p_1,p_2) = \sqrt{(p_1-p_2)^tS^{-1}(p_1-p_2)}     \\
 \hspace{8mm}其中：    \\
 \hspace{12mm}S为样本的协方差矩阵
 $$       
