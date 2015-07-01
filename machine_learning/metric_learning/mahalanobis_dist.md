@@ -2,7 +2,7 @@
 layout: page
 title: Mahalanobis Distance
 ---
-马氏距离又称为Statistical Distance，两点间的马氏距离定义如下：            
+马氏距离(不是[曼哈顿距离](http://baike.baidu.com/link?url=Hp_ynHxQdPoGzKAEQ8n9rPqDVGLfqLgvbEf0oD5tWo0tVZc55_63AMCp5soUBVYBHd2ubHHOIf4Y3nfoIlpBaa))又称为Statistical Distance，两点间的马氏距离定义如下：            
 $$
 \hspace{8mm}d(p_1,p_2) = \sqrt{(p_1-p_2)^tS^{-1}(p_1-p_2)}     \\
 \hspace{8mm}其中：    \\
