@@ -3,7 +3,7 @@ layout: page
 title: Face Detection
 ---
 
-最近在做一个比较经典的项目`人脸检测`。对就是人脸检测。一个不能做得太差的项目。因为现在的技术已经非常成熟，且开源的效果也是很好（如OpenCV）。目前基于Adaboost的Cascade算法应该算是权威的做法（并使用积分图进行加速）。开山之作`Paul Viola&&Micheal.J.Jones`的文章[1]。下面就基于Adaboost的Cascade算法进行展开。    
+最近在做一个比较经典的项目`人脸检测`。对就是人脸检测。一个不能做得太差的项目。因为现在的技术已经非常成熟，且开源的效果也是很好（如OpenCV）。Benchmark有[FDDB](http://vis-www.cs.umass.edu/fddb/)、[MALF](http://www.cbsr.ia.ac.cn/faceevaluation/results.html)，目前基于Adaboost的Cascade算法应该算是权威的做法（并使用积分图进行加速）。开山之作`Paul Viola&&Micheal.J.Jones`的文章[1]。下面就基于Adaboost的Cascade算法进行展开。    
 <br />    
 
 #### __特征__    
