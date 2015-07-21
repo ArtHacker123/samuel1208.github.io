@@ -6,7 +6,7 @@ title: CART(Classification and Regression Tree)
 
 #### __Regression__
 ---    
-使用`Recursive Binary Spliting`基于$$Loss = RSS = \sum\limits_{j=1}^{J}\sum\limits_{i\in R_j}(y_i - \overline y_{R_j})$$进行Tree的创建，每个leaf的值为节点中所有样本的y的均值。详细过程如下:    
+使用`Recursive Binary Spliting`基于$$Loss = RSS = \sum\limits_{j=1}^{J}\sum\limits_{i\in R_j}(y_i - \overline y_{R_j})^2$$(`即最小方差`)进行Tree的创建，每个leaf的值为节点中所有样本的y的均值。详细过程如下:    
 
 >  让我们用变量y表示response,用$$x_1, x_2, ..., x_p$$表示predictors。通过递归的方式把关于变量x的p维空间划分为不重叠的矩形。首先，基于minimize Loss选择一个$$x_i$$，在值th处进行分割得到两个空间: 一部分是$$x_i <= th$$, 另一部分是$$x_i > th$$。 接着再基于minimize Loss，在这两部分中的寻找一个部分并选择一个变量和该变量的划分值以相似的方式进行划分，这就形成了三个矩形区域。重复上面的步骤，只到每个leaf中的样本数小于一个阈值，这样就得到了J个区域       
 
