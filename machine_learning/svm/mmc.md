@@ -2,15 +2,25 @@
 layout: page
 title: Maximal Margin Classifier
 ---
+其有两种求解的方式：    
 
-*  __原理__    
+1.  __固定||W||=1，求最近样本到分类面的最大距离__    
 $$
-\hspace{4mm} \underbrace{Maximize}_{\beta_0,...,\beta_p} \{M\}  \\
+\hspace{4mm} \underbrace{Maximize}_{b,w_0,...,w_p} \{M\}  \\
 \hspace{4mm} \textbf{Subject}\hspace{4mm} \textbf{to} :  \\
-\hspace{8mm} \sum\limits_{j=1}^p\beta_j^2 = 1 \hspace{4mm}(\textbf{j从1开始，不包含}\beta_0)\\
-\hspace{8mm} y_i(\beta_0 + \beta_1x_{i1}+...+\beta_px_{ip}) \geq M \hspace{4mm}\forall i=1,...,n \\
+\hspace{8mm} ||W|| = 1 \\
+\hspace{8mm} y_i(b + w_0x_{i0}+...+w_px_{ip}) \geq M \hspace{4mm}\forall i=1,...,n \\
 \hspace{8mm} (y_i\textbf{为-1或者1})
-$$        
+$$       
+
+2.  __固定最近样本到分类面的距离的尺度M=1，求最小||W||__    
+![mmc](./img/3.png)    
+$$
+\hspace{4mm} \underbrace{Minimize}_{w_0,...,w_p} \{||W||\}  \\
+\hspace{4mm} \textbf{Subject}\hspace{4mm} \textbf{to} :  \\
+\hspace{8mm} y_i(\beta_0 + \beta_1x_{i1}+...+\beta_px_{ip}) \geq 1 \hspace{4mm}\forall i=1,...,n \\
+\hspace{8mm} (\textbf{M的大小决定了W的尺度，M可以为任意正数})    
+$$         
 
 *  __特性__    
 1. 在margine上的点称为`support vectors`
@@ -27,4 +37,5 @@ $$
 #### __Reference__ 
 ---    
 1. An Introduction to Statistical Learning (Chapter 9) 
+2. Learning with kernels (page12)
 
